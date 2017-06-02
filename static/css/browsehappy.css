@@ -1,0 +1,53 @@
+/* IE point out */
+
+#cbg-main-nav-wrapper {
+  position: absolute; z-index: 1100; top: 0px; left: 0; width: 100%; height: auto;
+}
+
+/* Fixed nav */
+#cbg-main-nav-wrapper.fixed {
+  position: fixed; top: 0;
+} 
+  #cbg-main-nav-wrapper.fixed #cbg-main-nav {
+    height: 61px;
+  }
+  #cbg-main-nav-wrapper.fixed #cbg-main-nav > .cbg-overlay {
+    height: 61px;
+  }
+  #cbg-main-nav-wrapper.fixed #cbg-main-nav .logo {
+    margin-top: 10px;
+  }
+  #cbg-main-nav-wrapper.fixed #cbg-main-nav .cbg-menu > li > a > span {
+    padding-bottom: 15px;
+  }
+  #cbg-main-nav-wrapper.fixed #cbg-main-nav .cbg-menu > li > a {
+    padding-top: 21px; height: 34px;
+  }
+  .ie8 #cbg-main-nav-wrapper.fixed #cbg-main-nav .cbg-menu > li > a {
+    padding-top: 20px;
+  }
+  #cbg-main-nav-wrapper.fixed #cbg-main-nav-search {
+    margin-top: 19px;
+  }
+
+.browsehappy{text-align: center;background: #cccccc;display:none;    height: 50px;   line-height: 50px; overflow: hidden }
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0){.browsehappy{height: 50px;   line-height: 50px;}}
+/*.browsehappy{ height: 55px;   line-height: 55px\0;}*/
+
+.browsehappy img{vertical-align: middle; border: none;}
+.browsehappy p a{ color:#000; text-decoration:none;}
+.browsehappy p a img{  border: none;}
+@media screen and (-webkit-min-device-pixel-ratio:0){.browsehappy{margin-top:0px;}}
+/*.browsehappy{ margin-top:-3px\0;}*/
+/* IE point out end */
+
+.sdw .product-nav .nova-icon {
+  width: 170px;
+  height: 48px;
+  margin-right: 15px;
+  text-indent: -9999px;
+  background: url(../images/title.jpg) no-repeat;
+}
+.sdw.cbg .product-nav{display: block;}

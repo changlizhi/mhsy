@@ -1,0 +1,15 @@
+{{ template "header"}}
+
+<div class="container"
+     style='padding-left: 10em;padding-top: 2em;padding-bottom:3em;'>
+  <p>请登录</p>
+  <form action="/denglu" method="post">
+    <input type="text" name="Name" placeholder="请输入用户名..." oninvalid="setCustomValidity('用户名为必输项！')" oninput="setCustomValidity('');" required="">
+  <p></p>
+  <input type="password" name="Password" placeholder="请输入密码..." oninvalid="setCustomValidity('密码为必输项！')" oninput="setCustomValidity('');" required="">
+  <p></p>
+  <input type="submit" value="登录">
+  <p></p>
+  </form>
+</div>
+{{ template "footer" .}}
