@@ -6,7 +6,8 @@ import (
 	"mhsy/src/adminservice"
 	"mhsy/src/newsservice"
 	"strconv"
-	"github.com/gpmgo/gopm/modules/log"
+	"mhsy/src/inits"
+	"log"
 )
 
 type Ckeditor_controller struct {
@@ -39,13 +40,10 @@ func (c *Ckeditor_controller) Post() {
 	path := "static/img/ckupload/" + h.Filename
 	err := c.SaveToFile("upload", path)
 	if err != nil {
-		log.Fatal("ckeditor上传文件错误！")
+		log.Println("ckeditor上传文件错误！")
 	}
 	f.Close()
-	c.Data["uploaded"] = 1
-	c.Data["fileName"] = h.Filename
-	c.Data["url"] = path
-	c.ServeJSON()
+	c.Ctx.WriteString(inits.Bgo_json.Xie_xian + path)
 	return
 }
 func (c *Base_controller) Get() {
