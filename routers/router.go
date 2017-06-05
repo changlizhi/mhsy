@@ -8,9 +8,11 @@ import (
 func init() {
 	beego.Router("/", &controllers.Shou_ye_controller{})
 	beego.Router("/mhsy", &controllers.Shou_ye_controller{})
+	beego.Router("/toeditor/*", &controllers.Toeditor_controller{})
 
 	beego.Router("/denglu", &controllers.Denglu_controller{})
-	beego.Router("/ckupload", &controllers.Ckeditor_controller{})
+	beego.Router("/uploadimg", &controllers.Imgupload_controller{})
+	beego.Router("/richeditor", &controllers.Richeditor_controller{})
 	beego.Router("/strategy/:id", &controllers.Strategy_controller{})
 	beego.Router("/base", &controllers.Base_controller{})
 	beego.Router("/dnamy", &controllers.Dnamy_controller{})

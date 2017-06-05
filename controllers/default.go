@@ -2,15 +2,21 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"log"
 	"mhsy/models"
 	"mhsy/src/adminservice"
 	"mhsy/src/newsservice"
 	"strconv"
-	"mhsy/src/inits"
-	"log"
+	"strings"
 )
 
-type Ckeditor_controller struct {
+type Richeditor_controller struct {
+	beego.Controller
+}
+type Imgupload_controller struct {
+	beego.Controller
+}
+type Toeditor_controller struct {
 	beego.Controller
 }
 type Base_controller struct {
@@ -35,16 +41,21 @@ type Static_controller struct {
 	beego.Controller
 }
 
-func (c *Ckeditor_controller) Post() {
+func (c *Imgupload_controller) Post() {
 	f, h, _ := c.GetFile("upload")
-	path := "static/img/ckupload/" + h.Filename
+	path := "static/img/upload/" + h.Filename
 	err := c.SaveToFile("upload", path)
 	if err != nil {
 		log.Println("ckeditor上传文件错误！")
 	}
 	f.Close()
-	c.Ctx.WriteString(inits.Bgo_json.Xie_xian + path)
+	c.Ctx.WriteString("{'url':'" + path + "','state':'SUCCESS'}")
 	return
+}
+func (c *Toeditor_controller) Get() {
+	requrl := c.Ctx.Request.URL.Path
+	c.Data["requrl"] = strings.Replace(requrl, "/toeditor", "", 1)
+	c.TplName = "toeditor.html"
 }
 func (c *Base_controller) Get() {
 	c.TplName = "base.html"
@@ -54,6 +65,14 @@ func (sy *Denglu_controller) Get() {
 }
 func (sy *Denglu_controller) Post() {
 	sy.TplName = "seltpl.html"
+}
+func (sy *Richeditor_controller) Post() {
+	content := sy.GetString("content")
+	log.Println(content)
+	requrl := sy.GetString("requrl")
+	sy.Data["json"] = map[string]interface{}{"state": 0, "content": requrl}
+	sy.ServeJSON()
+	return
 }
 
 func (sy *Shou_ye_controller) Get() {

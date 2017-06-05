@@ -67,7 +67,7 @@
 
         scripts[path] = 1
         if (id) ids[id] = 1
-        create(path, callback)
+        create("/" + path, callback)
       })
     }, 0)
     return $script

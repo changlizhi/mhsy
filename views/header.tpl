@@ -37,7 +37,7 @@
                 src="/static/js/insight.min.js"></script>
 
         <script type="text/javascript"
-                async=""
+
                 charset="utf-8"
                 id="utag_13"
                 src="/static/js/aquant.js"></script>
@@ -55,20 +55,26 @@
               href="/static/img/mh.ico">
         <script type="text/javascript"
                 src="/static/js/modernizr-2.8.3.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/jquery.lazyload.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/jquery.hoverIntent.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/jwplayer.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/jquery_fancybox_patch.min.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/jquery.cookie.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/idangerous.swiper.js"></script>
-        <script async=""
+        <script type="text/javascript"
                 src="/static/js/imagesloaded.pkgd.js"></script>
+        <script type='text/javascript'>
+          function toeditorpage() {
+            self.location = "/toeditor" + window.location.pathname;
+          }
+
+        </script>
         <title>
             美华尚医 amchis.com :::: 美丽中华，尚德智医
         </title>
@@ -115,14 +121,20 @@
 
                             <li>
                                 <a href="/base"
-                                   id="indexheader_0_ctl01_Repeater2_headLink_0"
-                                   data-value="{A48DE0FC-6920-4155-B0C8-B87FA492DBDD}"
                                    title="选择区域/语言">选择区域/语言
                                 </a>
                             </li>
 
                             <li>
-                                <a href="http://118.123.15.189:8055/mhsy_web/api/login/login.html" title="登录">用户登录</a>
+                                <a href="http://118.123.15.189:8055/mhsy_web/api/login/login.html"
+                                   title="登录">用户登录
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                   onclick='toeditorpage()'
+                                   title="编辑此页">编辑此页
+                                </a>
                             </li>
                         </ul>
 
@@ -266,7 +278,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/105" class="hw1_btn">
+                                                        <a href="/strategy/105"
+                                                           class="hw1_btn">
                                                             美华支持
                                                         </a>
                                                     </li>
@@ -293,7 +306,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/dnamy">
+                                                        <a href="/dnamy/0">
                                                             产品分类
                                                         </a>
                                                     </li>
@@ -303,7 +316,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/dnamy" class="hw1_btn">
+                                                        <a href="/dnamy/0"
+                                                           class="hw1_btn">
                                                             了解更多
                                                         </a>
                                                     </li>

@@ -1,19 +1,9 @@
 {{ template "header"}}
-<script src='/static/ckeditor/ckeditor.js'></script>
 <div class="container"
      style='padding-left: 10em;padding-top: 2em;padding-bottom:20em;'>
     <div>
         多谢访问，程序员努力开发中。。。
     </div>
-    <div id='ckeditor'></div>
-    <script>
-
-      CKEDITOR.replace('ckeditor', {
-        filebrowserBrowseUrl: '/ckupload/filelink',
-        filebrowserUploadUrl: '/ckupload',
-        image_previewText: ' '
-      });
-    </script>
 </div>
 
 {{ template "footer"}}
