@@ -141,11 +141,11 @@ func read_beego_json() (map[string]string, error) {
 	ret := map[string]string{}
 	bytes, err := ioutil.ReadFile(beego_json_dir)
 	if err != nil {
-		log.Fatal("读取json失败！")
+		log.Println("读取json失败！")
 		panic(err)
 	}
 	if err := json.Unmarshal(bytes, &ret); err != nil {
-		log.Fatal("解析json失败！")
+		log.Println("解析json失败！")
 		panic(err)
 	}
 	return ret, nil
