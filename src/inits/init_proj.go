@@ -14,7 +14,7 @@ import (
 var Ormer_global orm.Ormer
 var Bgo_json models.Beego_json
 
-var beego_json_dir = "src/inits/beego.json"
+var beego_json_dir = "conf/beego.json"
 var All_cols models.Mhsy_columns
 var json_obj map[string]string
 
