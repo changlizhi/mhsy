@@ -1,16 +1,17 @@
 package main
 
 import (
-	"log"
-	"strings"
-	"path/filepath"
-	"os"
-	"io/ioutil"
 	"encoding/json"
-	"mhsy/src/wenzhangleixingdao"
+	"io/ioutil"
+	"log"
 	"mhsy/models"
 	"mhsy/src/inits"
 	"mhsy/src/utils"
+	"mhsy/src/wenzhangdao"
+	"mhsy/src/wenzhangleixingdao"
+	"os"
+	"path/filepath"
+	"strings"
 )
 
 func String_split() {
@@ -48,18 +49,18 @@ func Get_json_path() {
 func TestAdd_multi() {
 	var wenzhang_leixings = []models.Wenzhang_leixing{
 		models.Wenzhang_leixing{
-			Id:    1,
-			Mingcheng:"类型名称1",
-			Fenlei:"分类1",
-			Fufenlei:"父分类1",
-			Paixu:1,
+			Id:        1,
+			Mingcheng: "类型名称1",
+			Fenlei:    "分类1",
+			Fufenlei:  "父分类1",
+			Paixu:     1,
 		},
 		models.Wenzhang_leixing{
-			Id:    2,
-			Mingcheng:"类型名称2",
-			Fenlei:"分类2",
-			Fufenlei:"父分类2",
-			Paixu:2,
+			Id:        2,
+			Mingcheng: "类型名称2",
+			Fenlei:    "分类2",
+			Fufenlei:  "父分类2",
+			Paixu:     2,
 		},
 	}
 	wenzhangleixingdao.Add_many_wenzhang_leixing(wenzhang_leixings)
@@ -85,7 +86,6 @@ func TestSelect_links() {
 	log.Println("链接名为：====", wenzhangleixing.Mingcheng)
 }
 
-
 func TestUpdate_wenzhangleixing() {
 	wenzhangleixing := new(models.Wenzhang_leixing)
 	wenzhangleixing.Id = 3
@@ -93,6 +93,27 @@ func TestUpdate_wenzhangleixing() {
 	wenzhangleixingdao.Update_wenzhang_leixing(wenzhangleixing)
 }
 
+func TestAdd_one_wenzhang() {
+	wenzhang := new(models.Wenzhang)
+	wenzhang.Id = 1
+	wenzhang.Wenben = "文本内容1"
+	wenzhang.Biaoti = "标题1"
+	wenzhang.Guanjianzi = "关键字1"
+	wenzhang.Laiyuan = "转发1"
+	wenzhang.Faburen = "管理员发布1"
+	wenzhang.Zhaiyao = "摘要1"
+	wenzhang.Zhiding = "1"
+	wenzhang.Shanchu = "0"
+	wenzhang.Dianjiliang = 10
+	wenzhang.Shijian = "2017-06-06"
+	wenzhang.Tupian = "/static/logo.png"
+	wenzhang.Quanxian = "ROLE_ADMIN"
+	wenzhang.Yuyan = "zh_CN"
+	wenzhang.Fenlei = "新闻"
+	wenzhang.Moban = "模板1"
+	wenzhangdao.Add_wenzhang(wenzhang)
+}
+
 func main() {
-	TestUpdate_wenzhangleixing()
+	TestAdd_one_wenzhang()
 }

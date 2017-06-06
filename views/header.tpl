@@ -69,12 +69,7 @@
                 src="/static/js/idangerous.swiper.js"></script>
         <script type="text/javascript"
                 src="/static/js/imagesloaded.pkgd.js"></script>
-        <script type='text/javascript'>
-          function toeditorpage() {
-            self.location = "/toeditor" + window.location.pathname;
-          }
 
-        </script>
         <title>
             美华尚医 amchis.com :::: 美丽中华，尚德智医
         </title>
@@ -128,12 +123,6 @@
                             <li>
                                 <a href="http://118.123.15.189:8055/mhsy_web/api/login/login.html"
                                    title="登录">用户登录
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"
-                                   onclick='toeditorpage()'
-                                   title="编辑此页">编辑此页
                                 </a>
                             </li>
                         </ul>

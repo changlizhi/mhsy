@@ -4,8 +4,8 @@ import (
 	"mhsy/models"
 	"mhsy/src/inits"
 	"mhsy/src/utils"
-	"testing"
 	"mhsy/src/wenzhangleixingdao"
+	"testing"
 )
 
 func TestAdd_wenzhang_leixing(t *testing.T) {

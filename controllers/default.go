@@ -8,6 +8,9 @@ import (
 	"mhsy/src/newsservice"
 	"strconv"
 	"strings"
+	"mhsy/src/wenzhangleixingservice"
+	"mhsy/src/wenzhangdao"
+	"mhsy/src/inits"
 )
 
 type Richeditor_controller struct {
@@ -52,9 +55,46 @@ func (c *Imgupload_controller) Post() {
 	c.Ctx.WriteString("{'url':'" + path + "','state':'SUCCESS'}")
 	return
 }
+
+// 获取到的路径为/toeditor/update[或add]/:type/:id
 func (c *Toeditor_controller) Get() {
 	requrl := c.Ctx.Request.URL.Path
-	c.Data["requrl"] = strings.Replace(requrl, "/toeditor", "", 1)
+	if !strings.Contains(requrl, "/toeditor") {
+		c.TplName = "error.html"
+		return
+	}
+	removepre := strings.Replace(requrl, "/toeditor", "", -1)
+	//log.Println(removepre)
+	//wenzhangs := wenzhangservice.Huoqu_suoyou_wenzhang()
+	//for i := 0; i < len(wenzhangs); i++ {
+	//	wenbenstr := beego.Str2html(wenzhangs[i].Wenben)
+	//	wenzhangs[i].Wenben = string(wenbenstr)
+	//	wenzhangservice.Gengxin_wenzhang(&wenzhangs[i])
+	//}
+
+	if strings.Contains(removepre, "/update") {
+		removetype := strings.Replace(removepre, "/update", "", -1)
+		splitstr := strings.Split(removetype, inits.Bgo_json.Xie_xian)
+		if len(splitstr) != 3 {
+			c.TplName = "error.html"
+			return
+		}
+		suoyou_fenlei := wenzhangleixingservice.Huoqu_suoyou_leixing()
+		for i := 0; i < len(suoyou_fenlei); i++ {
+			if suoyou_fenlei[i].Fenlei == splitstr[1] {
+				id, err := strconv.ParseInt(splitstr[2], 10, 10)
+				if err != nil {
+					log.Println(err)
+					c.TplName = "error.html"
+					return
+				}
+				wenzhang := wenzhangdao.Select_wenzhang(int(id))
+				c.Data["wenzhang"] = wenzhang
+				c.Data["requrl"] = removetype
+				c.TplName = "toeditor.html"
+			}
+		}
+	}
 	c.TplName = "toeditor.html"
 }
 func (c *Base_controller) Get() {

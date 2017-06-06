@@ -121,34 +121,34 @@ func load_orm() {
 	orm.RegisterDataBase(
 		Bgo_json.Db_using_default,
 		Bgo_json.Db_driver_mysql,
-		Bgo_json.Db_user +
-			Bgo_json.Mao_hao +
-			Bgo_json.Db_password +
-			Bgo_json.Quan_a +
-			Bgo_json.Db_protocol +
-			Bgo_json.Zuo_yuan_kuo +
-			Bgo_json.Db_ip +
-			Bgo_json.Mao_hao +
-			Bgo_json.Db_port +
-			Bgo_json.You_yuan_kuo +
-			Bgo_json.Xie_xian +
+		Bgo_json.Db_user+
+			Bgo_json.Mao_hao+
+			Bgo_json.Db_password+
+			Bgo_json.Quan_a+
+			Bgo_json.Db_protocol+
+			Bgo_json.Zuo_yuan_kuo+
+			Bgo_json.Db_ip+
+			Bgo_json.Mao_hao+
+			Bgo_json.Db_port+
+			Bgo_json.You_yuan_kuo+
+			Bgo_json.Xie_xian+
 			Bgo_json.Db_name_mhsy,
 		max_idle,
 		max_conn)
 	orm.RegisterDataBase(
 		Bgo_json.Db_using_mhsyen,
 		Bgo_json.Db_driver_mysql,
-		Bgo_json.Db_user +
-			Bgo_json.Mao_hao +
-			Bgo_json.Db_password +
-			Bgo_json.Quan_a +
-			Bgo_json.Db_protocol +
-			Bgo_json.Zuo_yuan_kuo +
-			Bgo_json.Db_ip +
-			Bgo_json.Mao_hao +
-			Bgo_json.Db_port +
-			Bgo_json.You_yuan_kuo +
-			Bgo_json.Xie_xian +
+		Bgo_json.Db_user+
+			Bgo_json.Mao_hao+
+			Bgo_json.Db_password+
+			Bgo_json.Quan_a+
+			Bgo_json.Db_protocol+
+			Bgo_json.Zuo_yuan_kuo+
+			Bgo_json.Db_ip+
+			Bgo_json.Mao_hao+
+			Bgo_json.Db_port+
+			Bgo_json.You_yuan_kuo+
+			Bgo_json.Xie_xian+
 			Bgo_json.Db_name_mhsy_en,
 		max_idle,
 		max_conn)

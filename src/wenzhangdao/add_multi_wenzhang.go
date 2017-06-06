@@ -1,4 +1,4 @@
-package wenzhangleixingdao
+package wenzhangdao
 
 import (
 	"mhsy/models"
