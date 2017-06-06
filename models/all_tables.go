@@ -64,3 +64,29 @@ type Ziti struct {
 	Id  int
 	Val int
 }
+
+type Wenzhang_leixing struct {
+	Id        int
+	Fenlei    string
+	Fufenlei  string
+	Mingcheng string
+	Paixu     int
+}
+type Wenzhang struct {
+	Id          int
+	Wenben      string
+	Biaoti      string
+	Guanjianzi  string
+	Laiyuan     string
+	Faburen     string
+	Zhaiyao     string
+	Zhiding     string
+	Shanchu     string
+	Dianjiliang int
+	Shijian     string
+	Tupian      string
+	Quanxian    string
+	Yuyan       string
+	Fenlei      string
+	Moban       string
+}

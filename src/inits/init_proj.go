@@ -2,7 +2,6 @@ package inits
 
 import (
 	"encoding/json"
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
 	"io/ioutil"
@@ -20,6 +19,7 @@ var json_obj map[string]string
 
 func init() {
 	//请勿颠倒顺序
+
 	load_json_obj()
 	load_beego_json()
 	load_orm()
@@ -28,8 +28,6 @@ func init() {
 	init_beego()
 }
 func init_beego() {
-	beego.SetStaticPath("/static", "static")
-	beego.SetStaticPath("/strategy/static", "static")
 }
 func load_column() {
 	All_cols.All_tables = json_obj["All_tables"]
@@ -60,6 +58,27 @@ func load_column() {
 	All_cols.Tb_News = json_obj["Tb_News"]
 	All_cols.Tb_News_pic = json_obj["Tb_News_pic"]
 	All_cols.Tb_Ziti = json_obj["Tb_Ziti"]
+
+	All_cols.Mingcheng = json_obj["Mingcheng"]
+	All_cols.Fenlei = json_obj["Fenlei"]
+	All_cols.Fufenlei = json_obj["Fufenlei"]
+	All_cols.Paixu = json_obj["Paixu"]
+	All_cols.Wenben = json_obj["Wenben"]
+	All_cols.Biaoti = json_obj["Biaoti"]
+	All_cols.Guanjianzi = json_obj["Guanjianzi"]
+	All_cols.Laiyuan = json_obj["Laiyuan"]
+	All_cols.Faburen = json_obj["Faburen"]
+	All_cols.Zhaiyao = json_obj["Zhaiyao"]
+	All_cols.Zhiding = json_obj["Zhiding"]
+	All_cols.Shanchu = json_obj["Shanchu"]
+	All_cols.Dianjiliang = json_obj["Dianjiliang"]
+	All_cols.Shijian = json_obj["Shijian"]
+	All_cols.Tupian = json_obj["Tupian"]
+	All_cols.Quanxian = json_obj["Quanxian"]
+	All_cols.Yuyan = json_obj["Yuyan"]
+	All_cols.Moban = json_obj["Moban"]
+	All_cols.Tb_Wenzhang_leixing = json_obj["Tb_Wenzhang_leixing"]
+	All_cols.Tb_Wenzhang = json_obj["Tb_Wenzhang"]
 }
 
 func Reload_json_and_orm() {
@@ -82,10 +101,13 @@ func load_orm() {
 		new(models.Lunbo),
 		new(models.News),
 		new(models.News_pic),
-		new(models.Ziti))
+		new(models.Ziti),
+		new(models.Wenzhang_leixing),
+		new(models.Wenzhang))
 	//拼接参数格式
 	// orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/xxx")
-	log.Println(Bgo_json.Mao_hao +
+	log.Println(Bgo_json.Db_user +
+		Bgo_json.Mao_hao +
 		Bgo_json.Db_password +
 		Bgo_json.Quan_a +
 		Bgo_json.Db_protocol +
@@ -99,34 +121,34 @@ func load_orm() {
 	orm.RegisterDataBase(
 		Bgo_json.Db_using_default,
 		Bgo_json.Db_driver_mysql,
-		Bgo_json.Db_user+
-			Bgo_json.Mao_hao+
-			Bgo_json.Db_password+
-			Bgo_json.Quan_a+
-			Bgo_json.Db_protocol+
-			Bgo_json.Zuo_yuan_kuo+
-			Bgo_json.Db_ip+
-			Bgo_json.Mao_hao+
-			Bgo_json.Db_port+
-			Bgo_json.You_yuan_kuo+
-			Bgo_json.Xie_xian+
+		Bgo_json.Db_user +
+			Bgo_json.Mao_hao +
+			Bgo_json.Db_password +
+			Bgo_json.Quan_a +
+			Bgo_json.Db_protocol +
+			Bgo_json.Zuo_yuan_kuo +
+			Bgo_json.Db_ip +
+			Bgo_json.Mao_hao +
+			Bgo_json.Db_port +
+			Bgo_json.You_yuan_kuo +
+			Bgo_json.Xie_xian +
 			Bgo_json.Db_name_mhsy,
 		max_idle,
 		max_conn)
 	orm.RegisterDataBase(
 		Bgo_json.Db_using_mhsyen,
 		Bgo_json.Db_driver_mysql,
-		Bgo_json.Db_user+
-			Bgo_json.Mao_hao+
-			Bgo_json.Db_password+
-			Bgo_json.Quan_a+
-			Bgo_json.Db_protocol+
-			Bgo_json.Zuo_yuan_kuo+
-			Bgo_json.Db_ip+
-			Bgo_json.Mao_hao+
-			Bgo_json.Db_port+
-			Bgo_json.You_yuan_kuo+
-			Bgo_json.Xie_xian+
+		Bgo_json.Db_user +
+			Bgo_json.Mao_hao +
+			Bgo_json.Db_password +
+			Bgo_json.Quan_a +
+			Bgo_json.Db_protocol +
+			Bgo_json.Zuo_yuan_kuo +
+			Bgo_json.Db_ip +
+			Bgo_json.Mao_hao +
+			Bgo_json.Db_port +
+			Bgo_json.You_yuan_kuo +
+			Bgo_json.Xie_xian +
 			Bgo_json.Db_name_mhsy_en,
 		max_idle,
 		max_conn)
