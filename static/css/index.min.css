@@ -796,7 +796,7 @@ h6 {
 }
 
 #hw1_card_list [class*=col-], #hw1_stage, .index-video {
-  margin-bottom: 1.5%
+  margin-bottom: 0
 }
 
 #hw1_card_list .row .row > .col-sm-12 {

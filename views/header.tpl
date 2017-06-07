@@ -104,8 +104,6 @@
 
                             <li>
                                 <a href="/base"
-                                   id="indexheader_0_ctl00_Repeater2_headLink_2"
-                                   data-value="{9A1DF972-FBB0-484E-A2F8-C79EB1418046}"
                                    title="注销">注销
                                 </a>
                             </li>
@@ -300,7 +298,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/94">
+                                                        <a href="/event/94">
                                                             如何购买
                                                         </a>
                                                     </li>
@@ -319,23 +317,23 @@
                                     <div class="hw1_box_wrap">
                                         <ul>
                                             <li>
-                                                <a href="/strategy/106">获取帮助</a>
+                                                <a href="/event/106">获取帮助</a>
                                             </li>
                                             <li>
                                                 <a href="/event/list/3">美华动态</a>
                                             </li>
                                             <li>
-                                                <a href="/strategy/101">
+                                                <a href="/event/101">
                                                     联系美华
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/strategy/107">
+                                                <a href="/event/107">
                                                     加入美华
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/strategy/87">
+                                                <a href="/event/87">
                                                     人才招聘
                                                 </a>
                                             </li>
@@ -459,12 +457,12 @@
                                     <h3>网络支持</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/106">
+                                            <a href="/event/106">
                                                 智能问答
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/108">
+                                            <a href="/event/108">
                                                 系统升级
                                             </a>
                                         </li>
@@ -475,12 +473,12 @@
                                     <h3>售后支持</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/109">
+                                            <a href="/event/109">
                                                 预约服务
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/110">
+                                            <a href="/event/110">
                                                 寄修服务
                                             </a>
                                         </li>
@@ -497,17 +495,17 @@
                                     <h3>运维政策</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/111">
+                                            <a href="/event/111">
                                                 保修政策
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/112">
+                                            <a href="/event/112">
                                                 环保回收
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/113">
+                                            <a href="/event/113">
                                                 管理咨询
                                             </a>
                                         </li>
@@ -523,10 +521,10 @@
                                     <h3>其他支持</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/115">以旧换新</a>
+                                            <a href="/event/115">以旧换新</a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/114">相关下载</a>
+                                            <a href="/event/114">相关下载</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -540,7 +538,7 @@
                                     <h3>糖尿病防控</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/116">
+                                            <a href="/event/116">
                                                 防控方案
                                             </a>
                                         </li>
@@ -582,12 +580,12 @@
                                     <h3>数码医学</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/117">
+                                            <a href="/event/117">
                                                 慢病治疗的数码解决原理
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/116">
+                                            <a href="/event/116">
                                                 针对糖尿病的解决方案
                                             </a>
                                         </li>
@@ -624,7 +622,7 @@
                                     <h3>合作政策</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/118">去除区域非理性竞争</a>
+                                            <a href="/event/118">去除区域非理性竞争</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -633,16 +631,16 @@
                                     <h3>合作方式</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/119">渠道供应</a>
+                                            <a href="/event/119">渠道供应</a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/119">医院合作</a>
+                                            <a href="/event/119">医院合作</a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/119">数据共享</a>
+                                            <a href="/event/119">数据共享</a>
                                         </li>
                                         <li>
-                                            <a href="/strategy/119">自建直销</a>
+                                            <a href="/event/119">自建直销</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -651,7 +649,7 @@
                                     <h3>渠道伙伴展示</h3>
                                     <ul>
                                         <li>
-                                            <a href="/strategy/120">好医生</a>
+                                            <a href="/event/120">好医生</a>
                                         </li>
                                     </ul>
                                 </div>

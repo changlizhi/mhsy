@@ -1,72 +1,36 @@
-{{ template "header"}}
+{{ template "header" .}}
 
-<div class="hw1_banner">
-    <div class="row banner-container">
-        <div id="hw1_stage">
-            <div id="hw1_content"
-                 class="text-center">
-                <div id="hw1_content_real">
-                    <div class="hw1_pc">
-                        <div style="top: 230px; left: -23%;">
-                            <p class="left">
-                                <a href="/event"
-                                   class="banner-btn">查看购买
-                                    <em>&nbsp;</em>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+<div class="container"
+     style='padding-left: 10em;padding-top: 2em;'>
+
+    <div class="row detail-page">
+        <div class="col-sm-8">
+            <h1>
+                {{.wenzhang.Biaoti}}
+            </h1>
+            <h2 class="subtitle">{{.wenzhang.Zhaiyao}}</h2>
+            <div class="video_box">
+                <div class="player-outer-box">
+                    <a id="details-player"></a>
                 </div>
             </div>
-            <div id="hw1_front"
-                 data-big-img="static/img/bannertop3.jpg"></div>
-        </div>
-    </div>
-</div>
-<div class="hw1_banner">
-    <div class="row banner-container">
-        <div id="hw1_stage">
-            <div id="hw1_content"
-                 class="text-center">
-                <div id="hw1_content_real">
-                    <div class="hw1_pc">
-                        <div style="top: 230px; left: -23%;">
-                            <p class="left">
-                                <a href="/event"
-                                   class="banner-btn">查看购买
-                                    <em>&nbsp;</em>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+            <div class="text-indent">
+                <style>
+                    .detail-page .col-sm-8 p {
+                        text-indent: 2em;
+                    }
+                </style>
+                <p id='str2html'>{{str2html .wenzhang.Wenben}}</p>
+                <script>
+                  $('#str2html').html($('#str2html').text())
+                </script>
+                <div>
+                    <br>
                 </div>
             </div>
-            <div id="hw1_front"
-                 style="background-image: url('/static/img/bannertop.jpg'); height: 700px; transform: translateY(-61.56px) translateZ(0px);"></div>
         </div>
     </div>
-</div>
-<div class="hw1_banner">
-    <div class="row banner-container">
-        <div id="hw1_stage">
-            <div id="hw1_content"
-                 class="text-center">
-                <div id="hw1_content_real">
-                    <div class="hw1_pc">
-                        <div style="top: 230px; left: -23%;">
-                            <p class="left">
-                                <a href="/event"
-                                   class="banner-btn">查看购买
-                                    <em>&nbsp;</em>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="hw1_front"
-                 style="background-image: url('/static/img/bannertop2.jpg'); height: 700px; transform: translateY(-61.56px) translateZ(0px);"></div>
-        </div>
+    <div class="col-sm-4 visible-md visible-lg visible-sm">
     </div>
 </div>
-{{template "footer"}}
+{{template "footer" .}}

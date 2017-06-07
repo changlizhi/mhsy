@@ -15,7 +15,7 @@ func init() {
 	beego.Router("/richeditor", &controllers.Richeditor_controller{})
 	beego.Router("/strategy/:id", &controllers.Strategy_controller{})
 	beego.Router("/base", &controllers.Base_controller{})
-	beego.Router("/dnamy", &controllers.Dnamy_controller{})
-	beego.Router("/event", &controllers.Event_controller{})
+	beego.Router("/dnamy/:id", &controllers.Dnamy_controller{})
+	beego.Router("/event/:id", &controllers.Event_controller{})
 	beego.Router("/api/GetUserTag", &controllers.Shou_ye_controller{})
 }

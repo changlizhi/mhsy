@@ -59,23 +59,13 @@ func (c *Imgupload_controller) Post() {
 // 获取到的路径为/toeditor/update[或add]/:type/:id
 func (c *Toeditor_controller) Get() {
 	requrl := c.Ctx.Request.URL.Path
-	if !strings.Contains(requrl, "/toeditor") {
-		c.TplName = "error.html"
-		return
-	}
 	removepre := strings.Replace(requrl, "/toeditor", "", -1)
-	//log.Println(removepre)
-	//wenzhangs := wenzhangservice.Huoqu_suoyou_wenzhang()
-	//for i := 0; i < len(wenzhangs); i++ {
-	//	wenbenstr := beego.Str2html(wenzhangs[i].Wenben)
-	//	wenzhangs[i].Wenben = string(wenbenstr)
-	//	wenzhangservice.Gengxin_wenzhang(&wenzhangs[i])
-	//}
 
 	if strings.Contains(removepre, "/update") {
 		removetype := strings.Replace(removepre, "/update", "", -1)
 		splitstr := strings.Split(removetype, inits.Bgo_json.Xie_xian)
 		if len(splitstr) != 3 {
+			log.Println("模块的restful请求路径错误")
 			c.TplName = "error.html"
 			return
 		}
@@ -84,18 +74,21 @@ func (c *Toeditor_controller) Get() {
 			if suoyou_fenlei[i].Fenlei == splitstr[1] {
 				id, err := strconv.ParseInt(splitstr[2], 10, 10)
 				if err != nil {
-					log.Println(err)
+					log.Println("需要修改的模块id无法转换为数字")
 					c.TplName = "error.html"
 					return
 				}
 				wenzhang := wenzhangdao.Select_wenzhang(int(id))
 				c.Data["wenzhang"] = wenzhang
 				c.Data["requrl"] = removetype
+				c.Data["editorflag"] = "update"
 				c.TplName = "toeditor.html"
+				return
 			}
 		}
 	}
-	c.TplName = "toeditor.html"
+	log.Println("需要修改的模块在数据库没有提供支持")
+	c.TplName = "error.html"
 }
 func (c *Base_controller) Get() {
 	c.TplName = "base.html"
@@ -107,9 +100,25 @@ func (sy *Denglu_controller) Post() {
 	sy.TplName = "seltpl.html"
 }
 func (sy *Richeditor_controller) Post() {
-	content := sy.GetString("content")
-	log.Println(content)
 	requrl := sy.GetString("requrl")
+	content := sy.GetString("content")
+	editorflag := sy.GetString("editorflag")
+	biaoti := sy.GetString("Biaoti")
+	zhaiyao := sy.GetString("Zhaiyao")
+	guanjianzi := sy.GetString("Guanjianzi")
+	faburen := sy.GetString("Faburen")
+	if editorflag == "update" {
+		idstr := sy.GetString("Id")
+		id, _ := strconv.ParseInt(idstr, 10, 10)
+		wenzhang_db := wenzhangdao.Select_wenzhang(int(id))
+		wenzhang_db.Wenben = content
+		wenzhang_db.Biaoti = biaoti
+		wenzhang_db.Zhaiyao = zhaiyao
+		wenzhang_db.Guanjianzi = guanjianzi
+		wenzhang_db.Faburen = faburen
+		wenzhangdao.Update_wenzhang(wenzhang_db)
+	}
+
 	sy.Data["json"] = map[string]interface{}{"state": 0, "content": requrl}
 	sy.ServeJSON()
 	return
@@ -136,8 +145,21 @@ func (sy *Strategy_controller) Get() {
 	sy.TplName = "strategy.html"
 }
 func (sy *Dnamy_controller) Get() {
-
+	idstr := sy.GetString(":id")
+	id, err := strconv.ParseInt(idstr, 10, 10)
+	if err != nil {
+		log.Println("参数id错误")
+		sy.TplName = "error.html"
+		return
+	}
+	if id == 0 {
+		sy.TplName = "dnamylist.html"
+		return
+	}
+	wenzhang := wenzhangdao.Select_wenzhang(int(id))
+	sy.Data["wenzhang"] = wenzhang
 	sy.TplName = "dnamy.html"
+
 }
 func (sy *Event_controller) Get() {
 

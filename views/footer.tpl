@@ -39,7 +39,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/87">
+                                        <a href="/event/87">
                                             求职者
                                         </a>
                                     </li>
@@ -48,31 +48,31 @@
                             <div class="col-sm-3">
                                 <ul>
                                     <li>
-                                        <a href="/strategy/89"
+                                        <a href="/event/89"
                                            target="_blank">
                                             公司简介
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/91"
+                                        <a href="/event/91"
                                            target="_blank">
                                             公司治理
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/92"
+                                        <a href="/event/92"
                                            target="_blank">
                                             公司愿景
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/93"
+                                        <a href="/event/93"
                                            target="_blank">
                                             管理理念
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/88"
+                                        <a href="/event/88"
                                            target="_blank">
                                             大事记
                                         </a>
@@ -107,7 +107,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="/strategy/94"
+                                        <a href="/event/94"
                                            target="_parent">
                                             购买与售后
                                         </a>
@@ -118,24 +118,24 @@
                             <div class="col-sm-3">
                                 <ul>
                                     <li>
-                                        <a href="/strategy/95"
+                                        <a href="/event/95"
                                            target="_blank">
                                             医学研究中心
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/96">
+                                        <a href="/event/96">
                                             健康管理中心
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/97"
+                                        <a href="/event/97"
                                            target="_blank">
                                             数据AI中心
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/strategy/98"
+                                        <a href="/event/98"
                                            target="_blank">
                                             数码医学理论
                                         </a>
@@ -187,19 +187,19 @@
                     <div class="bottom_right">
                         <ul>
                             <li class="editPageButtom">
-                                <a href="/strategy/99"
+                                <a href="/event/99"
                                    target="_parent">
                                     法律声明
                                 </a>
                             </li>
                             <li class="editPageButtom">
-                                <a href="/strategy/100"
+                                <a href="/event/100"
                                    target="_parent">
                                     隐私保护
                                 </a>
                             </li>
                             <li class="editPageButtom">
-                                <a href="/strategy/101"
+                                <a href="/event/101"
                                    target="_parent">
                                     联系我们
                                 </a>

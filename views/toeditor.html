@@ -118,6 +118,41 @@
 
 <div class="container"
      style='padding-left: 10em;padding-top: 2em;padding-bottom:20em;'>
+    <div>
+
+        <label>标题&nbsp;&nbsp;&nbsp;:</label>
+        <input type='text'
+               name='Biaoti'
+               style='width:500px'
+               value='{{ .wenzhang.Biaoti }}' />
+        <input type='text'
+               name='Id'
+               style='display: none;'
+               value='{{ .wenzhang.Id }}' />
+    </div>
+    <br />
+    <div>
+        <label>摘要&nbsp;&nbsp;&nbsp;:</label>
+        <input type='text'
+               name='Zhaiyao'
+               value='{{ .wenzhang.Zhaiyao }}' />
+
+    </div>
+    <br />
+    <div>
+        <label>关键字:</label>
+        <input type='text'
+               name='Guanjianzi'
+               value='{{ .wenzhang.Guanjianzi }}' />
+    </div>
+    <br />
+    <div>
+        <label>发布人:</label>
+        <input type='text'
+               name='Faburen'
+               value='{{ .wenzhang.Faburen }}' />
+    </div>
+    <br />
     <script type="text/plain"
             id="myEditor"
             style="width:100%;height:240px;">
@@ -131,7 +166,7 @@
 </div>
 
 <div id='fortemp'
-     style='display:none'>{{str2html .wenzhang.Wenben }}
+     style='display:none'>{{ str2html .wenzhang.Wenben }}
 </div>
 <script type="text/javascript">
   //实例化编辑器
@@ -141,8 +176,9 @@
 
   $(document).ready(function () {
     var wenben = $('#fortemp').text();
-    console.log(wenben);
     um.setContent(wenben)
+//    console.log($('input[name="Biaoti"]'))
+//    console.log(document.getElementsByName('Biaoti')[0].value)
   });
   //按钮的操作
   function saveEditor() {
@@ -153,6 +189,12 @@
       dataType: 'json',
       data: {
         'content': um.getContent(),
+        'Id': document.getElementsByName('Id')[0].value,
+        'Biaoti': document.getElementsByName('Biaoti')[0].value,
+        'Zhaiyao': document.getElementsByName('Zhaiyao')[0].value,
+        'Guanjianzi': document.getElementsByName('Guanjianzi')[0].value,
+        'Faburen': document.getElementsByName('Faburen')[0].value,
+        'editorflag': '{{.editorflag}}',
         'requrl': '{{.requrl}}'//不用引号也行，但格式化的时候会换行
       },
       async: false,
@@ -165,99 +207,99 @@
       }
     });
   }
-  function insertHtml() {
-    var value = prompt('插入html代码', '');
-    um.execCommand('insertHtml', value)
-  }
-  function isFocus() {
-    alert(um.isFocus())
-  }
-  function doBlur() {
-    um.blur()
-  }
-  function createEditor() {
-    enableBtn();
-    um = UM.getEditor('myEditor');
-  }
-  function getAllHtml() {
-    alert(UM.getEditor('myEditor').getAllHtml())
-  }
-  function getContent() {
-    var arr = [];
-    arr.push("使用editor.getContent()方法可以获得编辑器的内容");
-    arr.push("内容为：");
-    arr.push(UM.getEditor('myEditor').getContent());
-    alert(arr.join("\n"));
-  }
-  function getPlainTxt() {
-    var arr = [];
-    arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
-    arr.push("内容为：");
-    arr.push(UM.getEditor('myEditor').getPlainTxt());
-    alert(arr.join('\n'))
-  }
-  function setContent(isAppendTo) {
-    var arr = [];
-    arr.push("使用editor.setContent('欢迎使用umeditor')方法可以设置编辑器的内容");
-    UM.getEditor('myEditor').setContent('欢迎使用umeditor', isAppendTo);
-    alert(arr.join("\n"));
-  }
-  function setDisabled() {
-    UM.getEditor('myEditor').setDisabled('fullscreen');
-    disableBtn("enable");
-  }
-
-  function setEnabled() {
-    UM.getEditor('myEditor').setEnabled();
-    enableBtn();
-  }
-
-  function getText() {
-    //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
-    var range = UM.getEditor('myEditor').selection.getRange();
-    range.select();
-    var txt = UM.getEditor('myEditor').selection.getText();
-    alert(txt)
-  }
-
-  function getContentTxt() {
-    var arr = [];
-    arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
-    arr.push("编辑器的纯文本内容为：");
-    arr.push(UM.getEditor('myEditor').getContentTxt());
-    alert(arr.join("\n"));
-  }
-  function hasContent() {
-    var arr = [];
-    arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
-    arr.push("判断结果为：");
-    arr.push(UM.getEditor('myEditor').hasContents());
-    alert(arr.join("\n"));
-  }
-  function setFocus() {
-    UM.getEditor('myEditor').focus();
-  }
-  function deleteEditor() {
-    disableBtn();
-    UM.getEditor('myEditor').destroy();
-  }
-  function disableBtn(str) {
-    var div = document.getElementById('btns');
-    var btns = domUtils.getElementsByTagName(div, "button");
-    for (var i = 0, btn; btn = btns[i++];) {
-      if (btn.id == str) {
-        domUtils.removeAttributes(btn, ["disabled"]);
-      } else {
-        btn.setAttribute("disabled", "true");
-      }
-    }
-  }
-  function enableBtn() {
-    var div = document.getElementById('btns');
-    var btns = domUtils.getElementsByTagName(div, "button");
-    for (var i = 0, btn; btn = btns[i++];) {
-      domUtils.removeAttributes(btn, ["disabled"]);
-    }
-  }
+  //  /*function insertHtml() {
+  //    var value = prompt('插入html代码', '');
+  //    um.execCommand('insertHtml', value)
+  //  }
+  //  function isFocus() {
+  //    alert(um.isFocus())
+  //  }
+  //  function doBlur() {
+  //    um.blur()
+  //  }
+  //  function createEditor() {
+  //    enableBtn();
+  //    um = UM.getEditor('myEditor');
+  //  }
+  //  function getAllHtml() {
+  //    alert(UM.getEditor('myEditor').getAllHtml())
+  //  }
+  //  function getContent() {
+  //    var arr = [];
+  //    arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+  //    arr.push("内容为：");
+  //    arr.push(UM.getEditor('myEditor').getContent());
+  //    alert(arr.join("\n"));
+  //  }
+  //  function getPlainTxt() {
+  //    var arr = [];
+  //    arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+  //    arr.push("内容为：");
+  //    arr.push(UM.getEditor('myEditor').getPlainTxt());
+  //    alert(arr.join('\n'))
+  //  }
+  //  function setContent(isAppendTo) {
+  //    var arr = [];
+  //    arr.push("使用editor.setContent('欢迎使用umeditor')方法可以设置编辑器的内容");
+  //    UM.getEditor('myEditor').setContent('欢迎使用umeditor', isAppendTo);
+  //    alert(arr.join("\n"));
+  //  }
+  //  function setDisabled() {
+  //    UM.getEditor('myEditor').setDisabled('fullscreen');
+  //    disableBtn("enable");
+  //  }
+  //
+  //  function setEnabled() {
+  //    UM.getEditor('myEditor').setEnabled();
+  //    enableBtn();
+  //  }
+  //
+  //  function getText() {
+  //    //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+  //    var range = UM.getEditor('myEditor').selection.getRange();
+  //    range.select();
+  //    var txt = UM.getEditor('myEditor').selection.getText();
+  //    alert(txt)
+  //  }
+  //
+  //  function getContentTxt() {
+  //    var arr = [];
+  //    arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+  //    arr.push("编辑器的纯文本内容为：");
+  //    arr.push(UM.getEditor('myEditor').getContentTxt());
+  //    alert(arr.join("\n"));
+  //  }
+  //  function hasContent() {
+  //    var arr = [];
+  //    arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+  //    arr.push("判断结果为：");
+  //    arr.push(UM.getEditor('myEditor').hasContents());
+  //    alert(arr.join("\n"));
+  //  }
+  //  function setFocus() {
+  //    UM.getEditor('myEditor').focus();
+  //  }
+  //  function deleteEditor() {
+  //    disableBtn();
+  //    UM.getEditor('myEditor').destroy();
+  //  }
+  //  function disableBtn(str) {
+  //    var div = document.getElementById('btns');
+  //    var btns = domUtils.getElementsByTagName(div, "button");
+  //    for (var i = 0, btn; btn = btns[i++];) {
+  //      if (btn.id == str) {
+  //        domUtils.removeAttributes(btn, ["disabled"]);
+  //      } else {
+  //        btn.setAttribute("disabled", "true");
+  //      }
+  //    }
+  //  }
+  //  function enableBtn() {
+  //    var div = document.getElementById('btns');
+  //    var btns = domUtils.getElementsByTagName(div, "button");
+  //    for (var i = 0, btn; btn = btns[i++];) {
+  //      domUtils.removeAttributes(btn, ["disabled"]);
+  //    }
+  //  }*/
 </script>
 {{ template "footer"}}
