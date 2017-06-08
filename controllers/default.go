@@ -5,12 +5,12 @@ import (
 	"log"
 	"mhsy/models"
 	"mhsy/src/adminservice"
+	"mhsy/src/inits"
 	"mhsy/src/newsservice"
+	"mhsy/src/wenzhangdao"
+	"mhsy/src/wenzhangleixingservice"
 	"strconv"
 	"strings"
-	"mhsy/src/wenzhangleixingservice"
-	"mhsy/src/wenzhangdao"
-	"mhsy/src/inits"
 )
 
 type Richeditor_controller struct {

@@ -5,7 +5,7 @@ import (
 	"mhsy/src/inits"
 )
 
-func Select_wenzhang_leixing_all() ([]models.Wenzhang_leixing) {
+func Select_wenzhang_leixing_all() []models.Wenzhang_leixing {
 	tab := inits.All_cols.Tb_Wenzhang_leixing
 
 	qs := inits.Ormer_global.QueryTable(tab)

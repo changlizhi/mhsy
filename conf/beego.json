@@ -1,6 +1,6 @@
 {
   "Orm_debug": "true",
-  "Db_name_mhsy": "mhsy",
+  "Db_name_mhsy": "mhsy_web",
   "Db_name_mhsy_en": "mhsyen",
   "Db_driver_mysql": "mysql",
   "Db_using_default": "default",
@@ -12,7 +12,7 @@
   "Db_port": "3306",
   "Base_dir": "D:/allworkspace/gopath/src",
   "Proj_dir": "mhsy",
-  "Web_url": "10.0.0.125",
+  "Web_url": "localhost",
   "Pager_size": "5",
   "Bo_lang": "~",
   "Gan_tan": "!",

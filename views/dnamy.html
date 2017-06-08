@@ -3,24 +3,24 @@
 <div class="container"
      style='padding-left: 10em;padding-top: 2em;'>
 
-    <div class="row detail-page">
-        <div class="col-sm-8">
+    <div style='width:100%;' class="row detail-page">
+        <div style='width:100%;' class="col-sm-8">
             <h1>
                 {{.wenzhang.Biaoti}}
             </h1>
-            <h2 class="subtitle">{{.wenzhang.Zhaiyao}}</h2>
+            <h2 class="subtitle" style='width:100%;'>{{.wenzhang.Zhaiyao}}</h2>
             <div class="video_box">
                 <div class="player-outer-box">
                     <a id="details-player"></a>
                 </div>
             </div>
-            <div class="text-indent">
+            <div class="text-indent" style='width:100%;'>
                 <style>
                     .detail-page .col-sm-8 p {
                         text-indent: 2em;
                     }
                 </style>
-                <p id='str2html'>{{str2html .wenzhang.Wenben}}</p>
+                <p id='str2html' style='width:100%;'>{{str2html .wenzhang.Wenben}}</p>
                 <script>
                   $('#str2html').html($('#str2html').text())
                 </script>
