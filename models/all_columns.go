@@ -3,8 +3,8 @@ package models
 type Mhsy_columns struct {
 	//除All_tables外每一个字段的值都必须按照格式来组织分割
 	//name,type,length,comment,table_name[,table_names]
-	All_tables  string
-	Id          string
+	All_tables string
+	Id         string
 
 	Mingcheng   string
 	Fenlei      string

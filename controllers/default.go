@@ -25,19 +25,14 @@ type Base_controller struct {
 type Shou_ye_controller struct {
 	beego.Controller
 }
-type Strategy_controller struct {
-	beego.Controller
-}
-type Event_controller struct {
-	beego.Controller
-}
 type Wenzhang_controller struct {
 	beego.Controller
 }
 type Denglu_controller struct {
 	beego.Controller
 }
-type Static_controller struct {
+
+type Dnamylist_controller struct {
 	beego.Controller
 }
 
@@ -90,13 +85,16 @@ func (c *Toeditor_controller) Get() {
 func (c *Base_controller) Get() {
 	c.TplName = "base.html"
 }
+func (sy *Dnamylist_controller) Get() {
+	sy.TplName = "dnamylist.html"
+}
 func (sy *Denglu_controller) Get() {
 	sy.TplName = "denglu.html"
 }
 func (sy *Denglu_controller) Post() {
 	name := sy.GetString("Name")
 	passwd := sy.GetString("Password")
-	log.Println(name,passwd)
+	log.Println(name, passwd)
 	sy.TplName = "seltpl.html"
 }
 func (sy *Richeditor_controller) Post() {
@@ -146,4 +144,3 @@ func (sy *Wenzhang_controller) Get() {
 	sy.TplName = "wenzhang.html"
 
 }
-

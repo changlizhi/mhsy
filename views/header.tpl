@@ -87,7 +87,7 @@
                             style="display:none;">
 
                             <li>
-                                <a href="/base"
+                                <a href="/doc/291"
                                    id="indexheader_0_ctl00_Repeater2_headLink_0"
                                    data-value="{A48DE0FC-6920-4155-B0C8-B87FA492DBDD}"
                                    title="选择区域/语言">选择区域/语言
@@ -95,7 +95,7 @@
                             </li>
 
                             <li>
-                                <a href="/base"
+                                <a href="/doc/292"
                                    id="indexheader_0_ctl00_Repeater2_headLink_1"
                                    data-value="{EFC7E115-5A3F-4653-907B-D435428F78E1}"
                                    title="个性化服务">个性化服务
@@ -103,7 +103,7 @@
                             </li>
 
                             <li>
-                                <a href="/base"
+                                <a href="/doc/293"
                                    title="注销">注销
                                 </a>
                             </li>
@@ -113,7 +113,7 @@
                             style="display:block;">
 
                             <li>
-                                <a href="/base"
+                                <a href="/doc/294"
                                    title="选择区域/语言">选择区域/语言
                                 </a>
                             </li>
@@ -180,7 +180,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/base"
+                                    <a href="/doc/295"
                                        id="indexheader_0_rptNavTitle_linkButton_5"
                                        data-menutype="megamenu"
                                        data-section="hwmm6">
@@ -209,17 +209,17 @@
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
-                                                        <a href="/event/102">
+                                                        <a href="/doc/296">
                                                             母公司介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/98">
+                                                        <a href="/doc/297">
                                                             数码医学的理论
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/103">
+                                                        <a href="/doc/298">
                                                             资质荣誉
                                                         </a>
                                                     </li>
@@ -240,32 +240,32 @@
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
-                                                        <a href="/event/89">
+                                                        <a href="/doc/299">
                                                             子公司介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/95">
+                                                        <a href="/doc/300">
                                                             研发中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/97">
+                                                        <a href="/doc/301">
                                                             数据AI中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/96">
+                                                        <a href="/doc/302">
                                                             服务中中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/104">
+                                                        <a href="/doc/303">
                                                             全球营销体系介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/105"
+                                                        <a href="/doc/304"
                                                            class="hw1_btn">
                                                             美华支持
                                                         </a>
@@ -288,22 +288,22 @@
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
-                                                        <a href="/dnamy/1">
+                                                        <a href="/doc/305">
                                                             产品介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/dnamy/0">
+                                                        <a href="/doc/306">
                                                             产品分类
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/event/94">
+                                                        <a href="/doc/307">
                                                             如何购买
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/dnamy/0"
+                                                        <a href="/doc/308"
                                                            class="hw1_btn">
                                                             了解更多
                                                         </a>
@@ -317,23 +317,23 @@
                                     <div class="hw1_box_wrap">
                                         <ul>
                                             <li>
-                                                <a href="/event/106">获取帮助</a>
+                                                <a href="/doc/309">获取帮助</a>
                                             </li>
                                             <li>
-                                                <a href="/event/list/3">美华动态</a>
+                                                <a href="/doc/310">美华动态</a>
                                             </li>
                                             <li>
-                                                <a href="/event/101">
+                                                <a href="/doc/311">
                                                     联系美华
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/event/107">
+                                                <a href="/doc/312">
                                                     加入美华
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/event/87">
+                                                <a href="/doc/313">
                                                     人才招聘
                                                 </a>
                                             </li>
@@ -348,7 +348,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/dnamy/1"
+                                        <a href="/doc/314"
                                            class="hw1_box_content">
                                             <h3>大众版动态修复机</h3>
                                             <div class="hw1_box_img">
@@ -356,7 +356,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/dnamy/1"
+                                        <a href="/doc/315"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -365,7 +365,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/dnamy/2"
+                                        <a href="/doc316"
                                            class="hw1_box_content">
                                             <h3>定制版动态修复机</h3>
                                             <div class="hw1_box_img">
@@ -373,7 +373,7 @@
                                                      class="img-responsive center-block ">
                                             </div>
                                         </a>
-                                        <a href="/dnamy/2"
+                                        <a href="/doc/317"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -382,7 +382,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/dnamy/3"
+                                        <a href="/doc/318"
                                            class="hw1_box_content">
                                             <h3>医疗版动态修复机</h3>
                                             <div class="hw1_box_img">
@@ -390,7 +390,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/dnamy/3"
+                                        <a href="/doc/319"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -399,7 +399,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/dnamy/4"
+                                        <a href="/doc/320"
                                            class="hw1_box_content">
                                             <h3>动态修复太空舱</h3>
                                             <div class="hw1_box_img">
@@ -407,7 +407,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/dnamy/4"
+                                        <a href="/doc/321"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -416,7 +416,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/dnamy/5"
+                                        <a href="/doc/322"
                                            class="hw1_box_content">
                                             <h3>普通版</h3>
                                             <div class="hw1_box_img">
@@ -424,7 +424,7 @@
                                                      src="/static/img/chanpin2.jpg">
                                             </div>
                                         </a>
-                                        <a href="/dnamy/5"
+                                        <a href="/doc/323"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -433,7 +433,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/dnamy/6"
+                                        <a href="/doc/324"
                                            class="hw1_box_content">
                                             <h3>青花瓷版</h3>
                                             <div class="hw1_box_img">
@@ -441,7 +441,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/dnamy/7"
+                                        <a href="/doc/325"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -457,12 +457,12 @@
                                     <h3>网络支持</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/106">
+                                            <a href="/doc/326">
                                                 智能问答
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/event/108">
+                                            <a href="/doc/327">
                                                 系统升级
                                             </a>
                                         </li>
@@ -473,17 +473,17 @@
                                     <h3>售后支持</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/109">
+                                            <a href="/doc/328">
                                                 预约服务
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/event/110">
+                                            <a href="/doc/329">
                                                 寄修服务
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/server"
+                                            <a href="/doc/330"
                                                class="hw1_btn">
                                                 查看更多
                                                 &gt;</a>
@@ -495,22 +495,22 @@
                                     <h3>运维政策</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/111">
+                                            <a href="/doc/331">
                                                 保修政策
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/event/112">
+                                            <a href="/doc/332">
                                                 环保回收
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/event/113">
+                                            <a href="/doc/333">
                                                 管理咨询
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base"
+                                            <a href="/doc/334"
                                                class="hw1_btn">查看更多
                                                 &gt;</a>
                                         </li>
@@ -521,10 +521,10 @@
                                     <h3>其他支持</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/115">以旧换新</a>
+                                            <a href="/doc/335">以旧换新</a>
                                         </li>
                                         <li>
-                                            <a href="/event/114">相关下载</a>
+                                            <a href="/doc/336">相关下载</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -538,12 +538,12 @@
                                     <h3>糖尿病防控</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/116">
+                                            <a href="/doc/337">
                                                 防控方案
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base"
+                                            <a href="/doc/338"
                                                class="hw1_btn">查看更多
                                                 &gt;</a>
                                         </li>
@@ -559,17 +559,17 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base">
+                                            <a href="/doc/339">
                                                 合作渠道平台
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base">
+                                            <a href="/doc/340">
                                                 医院平台
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base"
+                                            <a href="/doc/341"
                                                class="hw1_btn">查看更多
                                                 &gt;</a>
                                         </li>
@@ -580,22 +580,22 @@
                                     <h3>数码医学</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/117">
+                                            <a href="/doc/342">
                                                 慢病治疗的数码解决原理
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/event/116">
+                                            <a href="/doc/343">
                                                 针对糖尿病的解决方案
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base">
+                                            <a href="/doc/345">
                                                 其他病症解决方向
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/base"
+                                            <a href="/doc/346"
                                                class="hw1_btn">查看更多
                                                 &gt;</a>
                                         </li>
@@ -622,7 +622,7 @@
                                     <h3>合作政策</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/118">去除区域非理性竞争</a>
+                                            <a href="/doc/347">去除区域非理性竞争</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -631,16 +631,16 @@
                                     <h3>合作方式</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/119">渠道供应</a>
+                                            <a href="/doc/348">渠道供应</a>
                                         </li>
                                         <li>
-                                            <a href="/event/119">医院合作</a>
+                                            <a href="/doc/349">医院合作</a>
                                         </li>
                                         <li>
-                                            <a href="/event/119">数据共享</a>
+                                            <a href="/doc/350">数据共享</a>
                                         </li>
                                         <li>
-                                            <a href="/event/119">自建直销</a>
+                                            <a href="/doc/351">自建直销</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -649,7 +649,7 @@
                                     <h3>渠道伙伴展示</h3>
                                     <ul>
                                         <li>
-                                            <a href="/event/120">好医生</a>
+                                            <a href="/doc/352">好医生</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -658,10 +658,10 @@
                                     <h3>查找经销商</h3>
                                     <ul>
                                         <li>
-                                            <a href="/base">按地域查找</a>
+                                            <a href="/doc/353">按地域查找</a>
                                         </li>
                                         <li>
-                                            <a href="/base">按名称查找</a>
+                                            <a href="/doc/354">按名称查找</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -671,7 +671,7 @@
                                     <h3>渠道商登录</h3>
                                     <ul>
                                         <li>
-                                            <a href="/base">好医生登录</a>
+                                            <a href="/doc/355">好医生登录</a>
                                         </li>
                                     </ul>
                                 </div>

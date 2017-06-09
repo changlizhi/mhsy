@@ -19,6 +19,15 @@
                oninput="setCustomValidity('');"
                required="">
         <p></p>
+        <div>
+        <input type="text"
+               name="Yanzhengma"
+               placeholder="请输入右边图片中的验证码..."
+               oninvalid="setCustomValidity('验证码为必输项！')"
+               oninput="setCustomValidity('');"
+               required="">
+               <img alt="验证码"/>
+        </div>
         <input type="submit"
                value="登录">
         <p></p>

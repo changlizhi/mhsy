@@ -17,29 +17,29 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/base">
+                                        <a href="/doc/268">
                                             企业用户
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/base">
+                                        <a href="/doc/269">
                                             销售商
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/base"
+                                        <a href="/doc/270"
                                            target="_parent">
                                             合作伙伴
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/base"
+                                        <a href="/doc/271"
                                            target="_blank">
                                             供应商
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/87">
+                                        <a href="/doc/272">
                                             求职者
                                         </a>
                                     </li>
@@ -48,31 +48,31 @@
                             <div class="col-sm-3">
                                 <ul>
                                     <li>
-                                        <a href="/event/89"
+                                        <a href="/doc/273"
                                            target="_blank">
                                             公司简介
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/91"
+                                        <a href="/doc/274"
                                            target="_blank">
                                             公司治理
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/92"
+                                        <a href="/doc/275"
                                            target="_blank">
                                             公司愿景
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/93"
+                                        <a href="/doc/276"
                                            target="_blank">
                                             管理理念
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/88"
+                                        <a href="/doc/277"
                                            target="_blank">
                                             大事记
                                         </a>
@@ -82,32 +82,32 @@
                             <div class="col-sm-3">
                                 <ul>
                                     <li>
-                                        <a href="/dnamy/1"
+                                        <a href="/doc/278"
                                            target="_parent">
                                             迪恩摩音
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/dnamy/2"
+                                        <a href="/doc/279"
                                            target="_parent">
                                             迪音治疗床
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/dnamy/3"
+                                        <a href="/doc/280"
                                            target="_parent">
                                             个性化定制
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/base"
+                                        <a href="/doc/281"
                                            target="_parent">
                                             商 城
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="/event/94"
+                                        <a href="/doc/282"
                                            target="_parent">
                                             购买与售后
                                         </a>
@@ -118,24 +118,24 @@
                             <div class="col-sm-3">
                                 <ul>
                                     <li>
-                                        <a href="/event/95"
+                                        <a href="/doc/283"
                                            target="_blank">
                                             医学研究中心
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/96">
+                                        <a href="/doc/284">
                                             健康管理中心
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/97"
+                                        <a href="/doc/285"
                                            target="_blank">
                                             数据AI中心
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/event/98"
+                                        <a href="/doc/286"
                                            target="_blank">
                                             数码医学理论
                                         </a>
@@ -180,7 +180,7 @@
                             2017 美华尚医（成都）生物科技有限公司
                             <a onclick='self.location = "/toeditor/update" + window.location.pathname'
                                style='text-decoration:none'>&nbsp;&nbsp;</a>
-                            <a href="/base"
+                            <a href="/doc/287"
                                target="_blank">蜀备20044005</a>
                         </span>
                     </div>
@@ -189,19 +189,19 @@
                     <div class="bottom_right">
                         <ul>
                             <li class="editPageButtom">
-                                <a href="/event/99"
+                                <a href="/doc/288"
                                    target="_parent">
                                     法律声明
                                 </a>
                             </li>
                             <li class="editPageButtom">
-                                <a href="/event/100"
+                                <a href="/doc/289"
                                    target="_parent">
                                     隐私保护
                                 </a>
                             </li>
                             <li class="editPageButtom">
-                                <a href="/event/101"
+                                <a href="/doc/290"
                                    target="_parent">
                                     联系我们
                                 </a>
