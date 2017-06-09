@@ -1,34 +1,36 @@
-{{template "header" .}}
+{{ template "header" .}}
 
 <div class="container"
      style='padding-left: 10em;padding-top: 2em;'>
 
-    <div class="text-indent">
-        <style>
-            .detail-page .col-sm-8 p {
-                text-indent: 2em;
-            }
-        </style>
-        <p>热烈祝贺：</p>
-        <p>美华尚医获得广州详能天使轮投资</p>
-        <p>
-            <img alt=""
-                 class="img-responsive center-block"
-                 src="/static/img/xieyi.jpg">
-        </p>
-        <p>
-            <img alt=""
-                 class="img-responsive center-block"
-                 src="/static/img/signing.jpg">
-        </p>
-        <p>
-            <img alt=""
-                 class="img-responsive center-block"
-                 src="/static/img/corp.jpg">
-        </p>
-        <div>
-            <br>
+    <div class="row detail-page">
+        <div class="col-sm-8">
+            <h1>
+                {{.wenzhang.Biaoti}}
+            </h1>
+            <h2 class="subtitle">{{.wenzhang.Zhaiyao}}</h2>
+            <div class="video_box">
+                <div class="player-outer-box">
+                    <a id="details-player"></a>
+                </div>
+            </div>
+            <div class="text-indent">
+                <style>
+                    .detail-page .col-sm-8 p {
+                        text-indent: 2em;
+                    }
+                </style>
+                <p id='str2html'>{{str2html .wenzhang.Wenben}}</p>
+                <script>
+                  $('#str2html').html($('#str2html').text())
+                </script>
+                <div>
+                    <br>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="col-sm-4 visible-md visible-lg visible-sm">
     </div>
 </div>
 {{template "footer" .}}

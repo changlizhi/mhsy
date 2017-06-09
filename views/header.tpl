@@ -209,17 +209,17 @@
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
-                                                        <a href="/strategy/102">
+                                                        <a href="/event/102">
                                                             母公司介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/98">
+                                                        <a href="/event/98">
                                                             数码医学的理论
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/103">
+                                                        <a href="/event/103">
                                                             资质荣誉
                                                         </a>
                                                     </li>
@@ -240,32 +240,32 @@
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
-                                                        <a href="/strategy/89">
+                                                        <a href="/event/89">
                                                             子公司介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/95">
+                                                        <a href="/event/95">
                                                             研发中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/97">
+                                                        <a href="/event/97">
                                                             数据AI中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/96">
+                                                        <a href="/event/96">
                                                             服务中中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/104">
+                                                        <a href="/event/104">
                                                             全球营销体系介绍
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/strategy/105"
+                                                        <a href="/event/105"
                                                            class="hw1_btn">
                                                             美华支持
                                                         </a>

@@ -3,10 +3,7 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"log"
-	"mhsy/models"
-	"mhsy/src/adminservice"
 	"mhsy/src/inits"
-	"mhsy/src/newsservice"
 	"mhsy/src/wenzhangdao"
 	"mhsy/src/wenzhangleixingservice"
 	"strconv"
@@ -34,7 +31,7 @@ type Strategy_controller struct {
 type Event_controller struct {
 	beego.Controller
 }
-type Dnamy_controller struct {
+type Wenzhang_controller struct {
 	beego.Controller
 }
 type Denglu_controller struct {
@@ -97,11 +94,15 @@ func (sy *Denglu_controller) Get() {
 	sy.TplName = "denglu.html"
 }
 func (sy *Denglu_controller) Post() {
+	name := sy.GetString("Name")
+	passwd := sy.GetString("Password")
+	log.Println(name,passwd)
 	sy.TplName = "seltpl.html"
 }
 func (sy *Richeditor_controller) Post() {
 	requrl := sy.GetString("requrl")
-	content := sy.GetString("content")
+	contentpre := sy.GetString("content")
+	content := strings.Replace(contentpre, "&nbsp;", " ", -1)
 	editorflag := sy.GetString("editorflag")
 	biaoti := sy.GetString("Biaoti")
 	zhaiyao := sy.GetString("Zhaiyao")
@@ -127,24 +128,8 @@ func (sy *Richeditor_controller) Post() {
 func (sy *Shou_ye_controller) Get() {
 	sy.TplName = "mhsy.html"
 }
-func (sy *Shou_ye_controller) Post() {
-	datas := adminservice.Find_admin_pager(1).Shu_ju
-	admins, ok := datas.([]models.Admin)
-	if ok {
-		sy.Data["Admins"] = admins
-	}
-	sy.TplName = "post.tpl"
-}
 
-func (sy *Strategy_controller) Get() {
-
-	id := sy.Ctx.Input.Param(":id")
-	idint, _ := strconv.ParseInt(id, 10, 10)
-	newsinfo := newsservice.Get_news_info(int(idint))
-	sy.Data["News"] = newsinfo
-	sy.TplName = "strategy.html"
-}
-func (sy *Dnamy_controller) Get() {
+func (sy *Wenzhang_controller) Get() {
 	idstr := sy.GetString(":id")
 	id, err := strconv.ParseInt(idstr, 10, 10)
 	if err != nil {
@@ -153,15 +138,12 @@ func (sy *Dnamy_controller) Get() {
 		return
 	}
 	if id == 0 {
-		sy.TplName = "dnamylist.html"
+		sy.TplName = "wenzhanglist.html"
 		return
 	}
 	wenzhang := wenzhangdao.Select_wenzhang(int(id))
 	sy.Data["wenzhang"] = wenzhang
-	sy.TplName = "dnamy.html"
+	sy.TplName = "wenzhang.html"
 
 }
-func (sy *Event_controller) Get() {
 
-	sy.TplName = "event.html"
-}
