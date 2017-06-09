@@ -256,7 +256,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="/doc/302">
-                                                            服务中中心介绍
+                                                            服务中心介绍
                                                         </a>
                                                     </li>
                                                     <li>
@@ -356,7 +356,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/doc/315"
+                                        <a href="/doc/314"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -373,7 +373,7 @@
                                                      class="img-responsive center-block ">
                                             </div>
                                         </a>
-                                        <a href="/doc/317"
+                                        <a href="/doc/316"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -390,7 +390,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/doc/319"
+                                        <a href="/doc/318"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -407,7 +407,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/doc/321"
+                                        <a href="/doc/320"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -424,7 +424,7 @@
                                                      src="/static/img/chanpin2.jpg">
                                             </div>
                                         </a>
-                                        <a href="/doc/323"
+                                        <a href="/doc/322"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
@@ -441,7 +441,7 @@
                                                      class="img-responsive center-block">
                                             </div>
                                         </a>
-                                        <a href="/doc/325"
+                                        <a href="/doc/324"
                                            class="hw1_btn">
                                             查看
                                             &gt;</a>
