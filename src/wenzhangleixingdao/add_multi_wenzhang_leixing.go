@@ -12,7 +12,7 @@ func Add_many_wenzhang_leixing(wenzhang_leixings []models.Wenzhang_leixing) {
 }
 
 func add_all_use_query(wenzhang_leixings []models.Wenzhang_leixing) {
-	inserter, _ := inits.Ormer_global.QueryTable("wenzhang_leixing").PrepareInsert()
+	inserter, _ := inits.Ormer_global.QueryTable(inits.All_cols.Tb_Wenzhang_leixing).PrepareInsert()
 	for _, wenzhang_leixing := range wenzhang_leixings {
 		inserter.Insert(&wenzhang_leixing)
 	}

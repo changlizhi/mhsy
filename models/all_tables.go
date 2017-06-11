@@ -1,72 +1,8 @@
 package models
 
-type Admin struct {
-	Id   int
-	User string
-	Pwd  string
-}
-type Category struct {
-	Id        int
-	Title     string
-	Parent_id int
-}
-type Config struct {
-	Id          int
-	Title       string
-	Keywords    string
-	Description string
-	Tel         string
-}
-
-type Content struct {
-	Id      int
-	Content string
-	Title   string
-}
-
-type Links struct {
-	Id    int
-	Title string
-	Url   string
-}
-type Lunbo struct {
-	Id        int
-	Title     string
-	Pic       string
-	Url       string
-	Addtime   string
-	Daohangid int
-}
-
-type News struct {
-	Id        int
-	Title     string
-	Intro     string
-	Content   string
-	Top_id    int
-	Second_id int
-	Addtime   string
-	Pdf       string
-}
-
-type News_pic struct {
-	Id        int
-	Title     string
-	Intro     string
-	Content   string
-	Top_id    int
-	Second_id int
-	Addtime   string
-	Pic       string
-}
-
-type Ziti struct {
-	Id  int
-	Val int
-}
-
 type Wenzhang_leixing struct {
 	Id        int
+	Biaoji    string
 	Fenlei    string
 	Fufenlei  string
 	Mingcheng string
@@ -74,6 +10,7 @@ type Wenzhang_leixing struct {
 }
 type Wenzhang struct {
 	Id          int
+	Biaoji      string
 	Wenben      string
 	Biaoti      string
 	Guanjianzi  string
@@ -89,4 +26,16 @@ type Wenzhang struct {
 	Yuyan       string
 	Fenlei      string
 	Moban       string
+}
+type Yonghu struct {
+	Id        int
+	Biaoji    string
+	Mingcheng string
+	Mima      string
+}
+type Yonghu_quanxian struct {
+	Id         int
+	Biaoji     string
+	Yonghuid   int
+	Quanxianid int
 }

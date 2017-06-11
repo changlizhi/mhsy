@@ -5,7 +5,7 @@ package models
 //xxx_type用于创建model文件。为了方便生成go文件，直接用go的对应类型
 //xxx_length用于验证用户输入信息
 //xxx_nullable用于验证用户输入
-type Table_admin struct {
+type Table_Yonghu_quanxian struct {
 	Name    string
 	Comment string
 
@@ -15,20 +15,25 @@ type Table_admin struct {
 	Id_nullable bool
 	Id_comment  string
 
-	Usr_name     string
-	Usr_type     string
-	Usr_length   int
-	Usr_nullable bool
-	Usr_comment  string
+	Biaoji_name     string
+	Biaoji_type     string
+	Biaoji_length   int
+	Biaoji_nullable bool
+	Biaoji_comment  string
 
-	Pwd_name     string
-	Pwd_type     string
-	Pwd_length   int
-	Pwd_nullable bool
-	Pwd_comment  string
+	Yonghuid_name     string
+	Yonghuid_type     string
+	Yonghuid_length   int
+	Yonghuid_nullable bool
+	Yonghuid_comment  string
+
+	QUanxianid_name     string
+	QUanxianid_type     string
+	QUanxianid_length   int
+	QUanxianid_nullable bool
+	QUanxianid_comment  string
 }
-
-type Table_category struct {
+type Table_Yonghu struct {
 	Name    string
 	Comment string
 
@@ -38,262 +43,23 @@ type Table_category struct {
 	Id_nullable bool
 	Id_comment  string
 
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
+	Biaoji_name     string
+	Biaoji_type     string
+	Biaoji_length   int
+	Biaoji_nullable bool
+	Biaoji_comment  string
 
-	Parent_id_name     string
-	Parent_id_type     string
-	Parent_id_length   int
-	Parent_id_nullable bool
-	Parent_id_comment  string
-}
+	Mingcheng_name     string
+	Mingcheng_type     string
+	Mingcheng_length   int
+	Mingcheng_nullable bool
+	Mingcheng_comment  string
 
-type Table_config struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
-
-	Keywords_name     string
-	Keywords_type     string
-	Keywords_length   int
-	Keywords_nullable bool
-	Keywords_comment  string
-
-	Description_name     string
-	Description_type     string
-	Description_length   int
-	Description_nullable bool
-	Description_comment  string
-
-	Tel_name     string
-	Tel_type     string
-	Tel_length   int
-	Tel_nullable bool
-	Tel_comment  string
-}
-
-type Table_content struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
-
-	Content_name     string
-	Content_type     string
-	Content_length   int
-	Content_nullable bool
-	Content_comment  string
-}
-
-type Table_links struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
-
-	Url_name     string
-	Url_type     string
-	Url_length   int
-	Url_nullable bool
-	Url_comment  string
-}
-
-type Table_lunbo struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
-
-	Pic_name     string
-	Pic_type     string
-	Pic_length   int
-	Pic_nullable bool
-	Pic_comment  string
-
-	Url_name     string
-	Url_type     string
-	Url_length   int
-	Url_nullable bool
-	Url_comment  string
-
-	Addtime_name     string
-	Addtime_type     string
-	Addtime_length   int
-	Addtime_nullable bool
-	Addtime_comment  string
-
-	Daohangid_name     string
-	Daohangid_type     string
-	Daohangid_length   int
-	Daohangid_nullable bool
-	Daohangid_comment  string
-}
-
-type Table_news struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
-
-	Intro_name     string
-	Intro_type     string
-	Intro_length   int
-	Intro_nullable bool
-	Intro_comment  string
-
-	Content_name     string
-	Content_type     string
-	Content_length   int
-	Content_nullable bool
-	Content_comment  string
-
-	Top_id_name     string
-	Top_id_type     string
-	Top_id_length   int
-	Top_id_nullable bool
-	Top_id_comment  string
-
-	Second_id_name     string
-	Second_id_type     string
-	Second_id_length   int
-	Second_id_nullable bool
-	Second_id_comment  string
-
-	Addtime_name     string
-	Addtime_type     string
-	Addtime_length   int
-	Addtime_nullable bool
-	Addtime_comment  string
-
-	Pdf_name     string
-	Pdf_type     string
-	Pdf_length   int
-	Pdf_nullable bool
-	Pdf_comment  string
-}
-
-type Table_news_pic struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Title_name     string
-	Title_type     string
-	Title_length   int
-	Title_nullable bool
-	Title_comment  string
-
-	Intro_name     string
-	Intro_type     string
-	Intro_length   int
-	Intro_nullable bool
-	Intro_comment  string
-
-	Content_name     string
-	Content_type     string
-	Content_length   int
-	Content_nullable bool
-	Content_comment  string
-
-	Top_id_name     string
-	Top_id_type     string
-	Top_id_length   int
-	Top_id_nullable bool
-	Top_id_comment  string
-
-	Second_id_name     string
-	Second_id_type     string
-	Second_id_length   int
-	Second_id_nullable bool
-	Second_id_comment  string
-
-	Addtime_name     string
-	Addtime_type     string
-	Addtime_length   int
-	Addtime_nullable bool
-	Addtime_comment  string
-
-	Pic_name     string
-	Pic_type     string
-	Pic_length   int
-	Pic_nullable bool
-	Pic_comment  string
-}
-
-type Table_ziti struct {
-	Name    string
-	Comment string
-
-	Id_name     string
-	Id_type     string
-	Id_length   int
-	Id_nullable bool
-	Id_comment  string
-
-	Val_name     string
-	Val_type     string
-	Val_length   int
-	Val_nullable bool
-	Val_comment  string
+	Mima_name     string
+	Mima_type     string
+	Mima_length   int
+	Mima_nullable bool
+	Mima_comment  string
 }
 type Table_Wenzhang_leixing struct {
 	Name    string
@@ -304,6 +70,12 @@ type Table_Wenzhang_leixing struct {
 	Id_length   int
 	Id_nullable bool
 	Id_comment  string
+
+	Biaoji_name     string
+	Biaoji_type     string
+	Biaoji_length   int
+	Biaoji_nullable bool
+	Biaoji_comment  string
 
 	Fenlei_name     string
 	Fenlei_type     string
@@ -338,6 +110,12 @@ type Table_Wenzhang struct {
 	Id_length   int
 	Id_nullable bool
 	Id_comment  string
+
+	Biaoji_name     string
+	Biaoji_type     string
+	Biaoji_length   int
+	Biaoji_nullable bool
+	Biaoji_comment  string
 
 	Fenlei_name     string
 	Fenlei_type     string

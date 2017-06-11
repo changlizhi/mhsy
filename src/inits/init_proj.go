@@ -53,6 +53,12 @@ func load_column() {
 	All_cols.Moban = json_obj["Moban"]
 	All_cols.Tb_Wenzhang_leixing = json_obj["Tb_Wenzhang_leixing"]
 	All_cols.Tb_Wenzhang = json_obj["Tb_Wenzhang"]
+	All_cols.Tb_Yonghu = json_obj["Tb_Yonghu"]
+	All_cols.Tb_Yonghu_quanxian = json_obj["Tb_Yonghu_quanxian"]
+	All_cols.Mima = json_obj["Mima"]
+	All_cols.Biaoji = json_obj["Biaoji"]
+	All_cols.Yonghuid = json_obj["Yonghuid"]
+	All_cols.Quanxianid = json_obj["Quanxianid"]
 }
 
 func Reload_json_and_orm() {
@@ -67,15 +73,8 @@ func load_orm() {
 	max_conn := 50
 	orm.Debug, _ = strconv.ParseBool(Bgo_json.Orm_debug)
 	orm.RegisterModel(
-		new(models.Admin),
-		new(models.Category),
-		new(models.Config),
-		new(models.Content),
-		new(models.Links),
-		new(models.Lunbo),
-		new(models.News),
-		new(models.News_pic),
-		new(models.Ziti),
+		new(models.Yonghu),
+		new(models.Yonghu_quanxian),
 		new(models.Wenzhang_leixing),
 		new(models.Wenzhang))
 	//拼接参数格式

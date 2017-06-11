@@ -24,7 +24,13 @@ type Mhsy_columns struct {
 	Quanxian    string
 	Yuyan       string
 	Moban       string
+	Biaoji      string
+	Mima        string
+	Yonghuid    string
+	Quanxianid  string
 
 	Tb_Wenzhang         string
 	Tb_Wenzhang_leixing string
+	Tb_Yonghu           string
+	Tb_Yonghu_quanxian  string
 }

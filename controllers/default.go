@@ -6,6 +6,7 @@ import (
 	"mhsy/src/inits"
 	"mhsy/src/wenzhangdao"
 	"mhsy/src/wenzhangleixingservice"
+	"mhsy/src/yonghuservice"
 	"strconv"
 	"strings"
 )
@@ -94,7 +95,7 @@ func (sy *Denglu_controller) Get() {
 func (sy *Denglu_controller) Post() {
 	name := sy.GetString("Name")
 	passwd := sy.GetString("Password")
-	log.Println(name, passwd)
+	yonghuservice.Yanzheng_yonghu(name, passwd)
 	sy.TplName = "seltpl.html"
 }
 func (sy *Richeditor_controller) Post() {
@@ -122,7 +123,6 @@ func (sy *Richeditor_controller) Post() {
 	sy.ServeJSON()
 	return
 }
-
 func (sy *Shou_ye_controller) Get() {
 	sy.TplName = "mhsy.html"
 }
