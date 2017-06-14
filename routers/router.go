@@ -6,8 +6,10 @@ import (
 )
 
 func init() {
+	beego.ErrorController(&controllers.Error_controller{})
 	beego.Router("/", &controllers.Shou_ye_controller{})
 	beego.Router("/mhsy", &controllers.Shou_ye_controller{})
+	beego.Router("/seltpl", &controllers.Seltpl_controller{})
 	beego.Router("/dnamylist", &controllers.Dnamylist_controller{})
 	beego.Router("/toeditor/*", &controllers.Toeditor_controller{})
 

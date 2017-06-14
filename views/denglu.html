@@ -5,6 +5,8 @@
     <p>请登录</p>
     <form action="/denglu"
           method="post">
+        {{.error}}
+        <p></p>
         <input type="text"
                name="Name"
                placeholder="请输入用户名..."

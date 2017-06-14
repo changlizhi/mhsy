@@ -30,6 +30,12 @@
               href="/static/css/index.min.css"
               type="text/css"
               media="screen, project, print">
+<script type="text/javascript">
+  function gotohref(href){
+    location.href = href + "/" + window.localStorage.getItem("jwt")
+  }
+  
+</script>
 
         <script type="text/javascript"
                 src="/static/js/jquery-1.11.1.min.js"></script>
@@ -365,7 +371,7 @@
                                 <div class="col-sm-2">
                                     <div class="hw1_box_wrap text-center"
                                          style="height: 315px;">
-                                        <a href="/doc316"
+                                        <a href="/doc/316"
                                            class="hw1_box_content">
                                             <h3>定制版动态修复机</h3>
                                             <div class="hw1_box_img">

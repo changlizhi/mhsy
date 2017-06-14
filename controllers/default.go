@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	jwt "github.com/dgrijalva/jwt-go"
 	"log"
 	"mhsy/src/inits"
 	"mhsy/src/wenzhangdao"
@@ -9,8 +10,12 @@ import (
 	"mhsy/src/yonghuservice"
 	"strconv"
 	"strings"
+	"time"
 )
 
+type Error_controller struct {
+	beego.Controller
+}
 type Richeditor_controller struct {
 	beego.Controller
 }
@@ -18,6 +23,9 @@ type Imgupload_controller struct {
 	beego.Controller
 }
 type Toeditor_controller struct {
+	beego.Controller
+}
+type Seltpl_controller struct {
 	beego.Controller
 }
 type Base_controller struct {
@@ -35,6 +43,10 @@ type Denglu_controller struct {
 
 type Dnamylist_controller struct {
 	beego.Controller
+}
+
+func (c *Error_controller) Error404() {
+	c.TplName = "error.html"
 }
 
 func (c *Imgupload_controller) Post() {
@@ -57,11 +69,19 @@ func (c *Toeditor_controller) Get() {
 	if strings.Contains(removepre, "/update") {
 		removetype := strings.Replace(removepre, "/update", "", -1)
 		splitstr := strings.Split(removetype, inits.Bgo_json.Xie_xian)
-		if len(splitstr) != 3 {
+		if len(splitstr) != 4 {
 			log.Println("模块的restful请求路径错误")
 			c.TplName = "error.html"
 			return
 		}
+		lingpai := splitstr[3]
+		tongguo, claims := Yanzheng_lingpai(lingpai)
+		if !tongguo {
+			log.Println("验证失败了，claims为null")
+			c.TplName = "autherror.html"
+			return
+		}
+		log.Println("自定义参数----------", claims.User)
 		suoyou_fenlei := wenzhangleixingservice.Huoqu_suoyou_leixing()
 		for i := 0; i < len(suoyou_fenlei); i++ {
 			if suoyou_fenlei[i].Fenlei == splitstr[1] {
@@ -73,7 +93,8 @@ func (c *Toeditor_controller) Get() {
 				}
 				wenzhang := wenzhangdao.Select_wenzhang(int(id))
 				c.Data["wenzhang"] = wenzhang
-				c.Data["requrl"] = removetype
+				requrl := inits.Bgo_json.Xie_xian + splitstr[1] + inits.Bgo_json.Xie_xian + splitstr[2]
+				c.Data["requrl"] = requrl
 				c.Data["editorflag"] = "update"
 				c.TplName = "toeditor.html"
 				return
@@ -83,22 +104,81 @@ func (c *Toeditor_controller) Get() {
 	log.Println("需要修改的模块在数据库没有提供支持")
 	c.TplName = "error.html"
 }
+func (c *Seltpl_controller) Get() {
+	c.TplName = "seltpl.html"
+}
 func (c *Base_controller) Get() {
 	c.TplName = "base.html"
 }
+func Yanzheng_lingpai(lingpai string) (bool, *Yanzheng_claims) {
+	token, err := jwt.ParseWithClaims(lingpai, &Yanzheng_claims{}, func(token *jwt.Token) (interface{}, error) {
+		key := []byte(inits.Bgo_json.Jwt_mima + inits.Bgo_json.Jwt_yan)
+		return key, nil
+	})
+	if err != nil {
+		log.Println(err)
+		log.Println("解析token失败")
+		return false, nil
+	}
+	if claims, ok := token.Claims.(*Yanzheng_claims); ok && token.Valid {
+		return true, claims
+	}
+	return false, nil
+}
 func (sy *Dnamylist_controller) Get() {
+	lingpai := sy.GetString("lingpai")
+	log.Println(lingpai)
 	sy.TplName = "dnamylist.html"
 }
 func (sy *Denglu_controller) Get() {
 	sy.TplName = "denglu.html"
 }
+
+type Yanzheng_claims struct {
+	User string
+	jwt.StandardClaims
+}
+
+func shengcheng_lingpai(user string) (string, error) {
+	key := []byte(inits.Bgo_json.Jwt_mima + inits.Bgo_json.Jwt_yan)
+	claims := Yanzheng_claims{
+		user,
+		jwt.StandardClaims{
+			ExpiresAt: time.Now().Add(time.Hour * 24).Unix(),
+		},
+	}
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	return token.SignedString(key)
+}
 func (sy *Denglu_controller) Post() {
 	name := sy.GetString("Name")
 	passwd := sy.GetString("Password")
-	yonghuservice.Yanzheng_yonghu(name, passwd)
-	sy.TplName = "seltpl.html"
+	chenggong := yonghuservice.Yanzheng_yonghu(name, passwd)
+	if !chenggong {
+		sy.Data["error"] = "用户名或密码错误！"
+		sy.TplName = "denglu.html"
+		return
+	}
+	lingpai, err := shengcheng_lingpai("{\"ok\":\"01010\"}")
+	if err != nil {
+		sy.Data["error"] = "生成令牌失败"
+		sy.TplName = "denglu.html"
+		return
+	}
+	sy.Data["lingpai"] = lingpai
+	sy.TplName = "fortoken.html"
+
 }
+
 func (sy *Richeditor_controller) Post() {
+	lingpai := strings.Split(sy.Ctx.Input.Header("Authorization"), " ")[1]
+	tongguo, claims := Yanzheng_lingpai(lingpai)
+	if !tongguo {
+		log.Println("验证失败了，claims为null")
+		sy.TplName = "autherror.html"
+		return
+	}
+	log.Println("自定义参数----------", claims.User)
 	requrl := sy.GetString("requrl")
 	contentpre := sy.GetString("content")
 	content := strings.Replace(contentpre, "&nbsp;", " ", -1)
@@ -140,7 +220,11 @@ func (sy *Wenzhang_controller) Get() {
 		return
 	}
 	wenzhang := wenzhangdao.Select_wenzhang(int(id))
-	sy.Data["wenzhang"] = wenzhang
-	sy.TplName = "wenzhang.html"
-
+	if wenzhang != nil {
+		sy.Data["wenzhang"] = wenzhang
+		sy.TplName = "wenzhang.html"
+		return
+	}
+	sy.TplName = "error.html"
+	return
 }

@@ -10,6 +10,8 @@
   "Db_protocol": "tcp",
   "Db_ip": "127.0.0.1",
   "Db_port": "3306",
+  "Jwt_mima": "123456",
+  "Jwt_yan": "clz",
   "Base_dir": "D:/allworkspace/gopath/src",
   "Proj_dir": "mhsy",
   "Web_url": "localhost",

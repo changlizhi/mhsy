@@ -48,6 +48,8 @@ type Beego_json struct {
 	Ju_hao           string
 	Dou_hao          string
 	Pager_size       string
+	Jwt_mima         string
+	Jwt_yan          string
 }
 type Column_props struct {
 	Name    string

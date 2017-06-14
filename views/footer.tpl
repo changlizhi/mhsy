@@ -176,12 +176,9 @@
                     <div class="bottom_left">
                         <span id="indexfooter_2_tCopyRight">
                             <a onclick='location.href="/denglu"'
-                               style='text-decoration:none'>©</a>
-                            2017 美华尚医（成都）生物科技有限公司
-                            <a onclick='self.location = "/toeditor/update" + window.location.pathname'
-                               style='text-decoration:none'>&nbsp;&nbsp;</a>
+                               style='text-decoration:none'>©</a>2017 美华尚医（成都）生物科技有限公司<a onclick='self.location = "/toeditor/update" + window.location.pathname + "/" + window.localStorage.getItem("jwt")' style='text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;</a>
                             <a href="/doc/287"
-                               target="_blank">蜀备20044005</a>
+                               target="_blank">蜀备20044005</a><a onclick='self.location = "/seltpl"' style='text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </span>
                     </div>
                 </div>

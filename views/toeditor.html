@@ -164,7 +164,7 @@
     <script type="text/plain"
             id="myEditor"
             style="width:100%;height:240px;">
-
+{{ str2html .wenzhang.Wenben }}
 
     </script>
     <button type='button'
@@ -173,30 +173,27 @@
 
 </div>
 
-<div id='fortemp'
-     style='display:none'>{{ str2html .wenzhang.Wenben }}
-</div>
 <script type="text/javascript">
   //实例化编辑器
 
 
   var um = UM.getEditor('myEditor');
 
-  $(document).ready(function () {
-    var wenben = $('#fortemp').text();
-    um.setContent(wenben)
-//    console.log($('input[name="Biaoti"]'))
-//    console.log(document.getElementsByName('Biaoti')[0].value)
-  });
   //按钮的操作
   function saveEditor() {
+    var href = window.location.protocol + "//" + window.location.host;
+    var re = new RegExp(href,"g")
+    var needContent=um.getContent().replace(re,"");
     $.ajax({
       cache: false,
-      type: 'post',
+      type: 'POST',
       url: '/richeditor',
       dataType: 'json',
+      beforeSend: function(request) {
+        request.setRequestHeader("Authorization", "Bearer " + window.localStorage.getItem("jwt"))
+      },
       data: {
-        'content': um.getContent(),
+        'content': needContent,
         'Id': document.getElementsByName('Id')[0].value,
         'Biaoti': document.getElementsByName('Biaoti')[0].value,
         'Zhaiyao': document.getElementsByName('Zhaiyao')[0].value,
@@ -211,7 +208,7 @@
         alert('保存失败，请联系管理员！');
       },
       success: function (res, status, xhr) {
-        self.location = res.content
+        location.href = res.content
       }
     });
   }
