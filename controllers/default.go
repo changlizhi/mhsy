@@ -34,6 +34,9 @@ type Base_controller struct {
 type Shou_ye_controller struct {
 	beego.Controller
 }
+type Wenzhanglist_controller struct {
+	beego.Controller
+}
 type Wenzhang_controller struct {
 	beego.Controller
 }
@@ -65,7 +68,6 @@ func (c *Imgupload_controller) Post() {
 func (c *Toeditor_controller) Get() {
 	requrl := c.Ctx.Request.URL.Path
 	removepre := strings.Replace(requrl, "/toeditor", "", -1)
-
 	if strings.Contains(removepre, "/update") {
 		removetype := strings.Replace(removepre, "/update", "", -1)
 		splitstr := strings.Split(removetype, inits.Bgo_json.Xie_xian)
@@ -100,6 +102,21 @@ func (c *Toeditor_controller) Get() {
 				return
 			}
 		}
+	}
+	if strings.Contains(removepre, "/add") {
+		splitstr := strings.Split(removepre, inits.Bgo_json.Xie_xian)
+		lingpai := splitstr[2]
+		tongguo, claims := Yanzheng_lingpai(lingpai)
+		if !tongguo {
+			log.Println("验证失败了，claims为null")
+			c.TplName = "autherror.html"
+			return
+		}
+		log.Println("自定义参数----------", claims.User)
+		c.Data["requrl"] = "wenzhanglist"
+		c.Data["editorflag"] = "add"
+		c.TplName="toeditor_new.html"
+		return
 	}
 	log.Println("需要修改的模块在数据库没有提供支持")
 	c.TplName = "error.html"
@@ -204,7 +221,27 @@ func (sy *Richeditor_controller) Post() {
 	return
 }
 func (sy *Shou_ye_controller) Get() {
+	wenzhang_xinxis := wenzhangdao.Select_shouye_xinxi()
+	wenzhang_xinwens := wenzhangdao.Select_shouye_xinwen()
+	if len(wenzhang_xinxis) != 6 || len(wenzhang_xinwens) != 5 {
+		log.Println("首页信息数据有误，请修改数据库！")
+		sy.TplName = "innererror.html"
+		return
+	}
+	for _, xinxi := range wenzhang_xinwens {
+		sy.Data[xinxi.Biaoji] = xinxi
+	}
+	for _, xinxi := range wenzhang_xinxis {
+		sy.Data[xinxi.Biaoji] = xinxi
+	}
 	sy.TplName = "mhsy.html"
+}
+
+func (sy *Wenzhanglist_controller) Get() {
+	dnamys:= wenzhangdao.Select_dnamy(int64(120))
+	sy.Data["Dnamy"] = dnamys
+	sy.TplName = "wenzhanglist.html"
+	return
 }
 
 func (sy *Wenzhang_controller) Get() {
@@ -216,7 +253,7 @@ func (sy *Wenzhang_controller) Get() {
 		return
 	}
 	if id == 0 {
-		sy.TplName = "wenzhanglist.html"
+		sy.TplName = "error.html"
 		return
 	}
 	wenzhang := wenzhangdao.Select_wenzhang(int(id))

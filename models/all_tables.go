@@ -1,5 +1,9 @@
 package models
 
+import (
+	"time"
+)
+
 type Wenzhang_leixing struct {
 	Id        int
 	Biaoji    string
@@ -20,7 +24,7 @@ type Wenzhang struct {
 	Zhiding     string
 	Shanchu     string
 	Dianjiliang int
-	Shijian     string
+	Shijian     time.Time
 	Tupian      string
 	Quanxian    string
 	Yuyan       string

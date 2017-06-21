@@ -9,11 +9,6 @@
                 {{.wenzhang.Biaoti}}
             </h1>
             <h2 class="subtitle">{{.wenzhang.Zhaiyao}}</h2>
-            <div class="video_box">
-                <div class="player-outer-box">
-                    <a id="details-player"></a>
-                </div>
-            </div>
             <div class="text-indent">
                 <style>
                     .detail-page .col-sm-8 p {
@@ -21,13 +16,8 @@
                     }
                 </style>
                 <p id='str2html'>{{str2html .wenzhang.Wenben}}</p>
-                <div>
-                    <br>
-                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-4 visible-md visible-lg visible-sm">
     </div>
 </div>
 {{template "footer" .}}

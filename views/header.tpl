@@ -210,13 +210,13 @@
                                             <img src="/"
                                                  class="img-responsive lazy"
                                                  alt=""
-                                                 data-original="/static/img/mugongsi.jpg"></span>
+                                                 data-original="/static/img/jituangongsi.jpg"></span>
                                             </div>
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
                                                         <a href="/doc/296">
-                                                            母公司介绍
+                                                            集团公司介绍
                                                         </a>
                                                     </li>
                                                     <li>
@@ -241,13 +241,13 @@
                                         <span class="lazy-placeholder">
                                             <img src="/"
                                                  class="img-responsive lazy"
-                                                 data-original="/static/img/zigongsi.jpg"></span>
+                                                 data-original="/static/img/meihuagongsi.jpg"></span>
                                             </div>
                                             <div class="col-sm-9">
                                                 <ul>
                                                     <li>
                                                         <a href="/doc/299">
-                                                            子公司介绍
+                                                            美华公司介绍
                                                         </a>
                                                     </li>
                                                     <li>
@@ -655,7 +655,7 @@
                                     <h3>渠道伙伴展示</h3>
                                     <ul>
                                         <li>
-                                            <a href="/doc/352">好医生</a>
+                                            <a href="/doc/355">好医生</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -664,10 +664,10 @@
                                     <h3>查找经销商</h3>
                                     <ul>
                                         <li>
-                                            <a href="/doc/353">按地域查找</a>
+                                            <a href="/doc/352">按地域查找</a>
                                         </li>
                                         <li>
-                                            <a href="/doc/354">按名称查找</a>
+                                            <a href="/doc/353">按名称查找</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -677,7 +677,7 @@
                                     <h3>渠道商登录</h3>
                                     <ul>
                                         <li>
-                                            <a href="/doc/355">好医生登录</a>
+                                            <a href="/doc/354">好医生登录</a>
                                         </li>
                                     </ul>
                                 </div>

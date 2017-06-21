@@ -8,7 +8,7 @@
                     <div class="hw1_pc">
                         <div style="top: 230px; left: -23%;">
                             <p class="left">
-                                <a href="/doc/356"
+                              <a href="/doc/{{.XINXI_FIRST.Id}}"
                                    class="banner-btn">了解更多
                                     <em>&nbsp;</em>
                                 </a>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div id="hw1_front"
-                 data-big-img="/static/img/bannertop.jpg">
+              data-big-img="{{.XINXI_FIRST.Tupian}}">
             </div>
         </div>
     </div>
@@ -38,17 +38,17 @@
                             <img class="img-responsive lazy"
                                  width="700"
                                  height="704"
-                                 data-original="/static/img/dnamy2.jpg?h=704&amp;la=zh&amp;w=700"
+                                 data-original="{{.XINXI_SECOND_LEFT.Tupian}}?h=704&amp;la=zh&amp;w=700"
                                  style="display: block;" />
                         </span>
                     </a>
                 </div>
                 <div class="hw1_img_subinfo"
                      style="display:block;">
-                    <a href="/dnamylist?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjoieXl5bm5uIiwiZXhwIjoxNDk3MzMxMDY4fQ.EnuapGFUuhf1Nn0BHfyLiacN5RdJT8qRjxphv74Utfs">
+                    <a href="/dnamylist">
                         <div class="hw1_img_wrap">
                             <h3>
-                                迪恩摩因
+                              {{.XINXI_SECOND_LEFT.Biaoti}}
                             </h3>
                         </div>
                     </a>
@@ -62,26 +62,25 @@
                          style="display:block;">
                         <div class="hw1_img"
                              style="display:block;">
-                            <a href="/doc/359">
+                             <a href="/doc/{{.XINXI_SECOND_RIGHT_UP.Id}}">
                                 <span class="lazy-loaded over">
-                                    <img src="/static/img/yanjiuzhongxin.jpg"
-                                         class="img-responsive lazy"
-                                         alt=""
-                                         width="700"
-                                         height="242"
-                                         data-original="/static/img/yanjiuzhongxin.jpg?h=342&amp;la=zh&amp;w=700"
-                                         style="display: block;" />
+                                  <img class="img-responsive lazy"
+                                       width="700"
+                                       height="242"
+                                       data-original="{{.XINXI_SECOND_RIGHT_UP.Tupian}}?h=342&amp;la=zh&amp;w=700"
+                                       style="display: block;" />
                                 </span>
                             </a>
                         </div>
                         <div class="hw1_img_subinfo"
                              style="display:block;">
-                            <a href="/doc/359">
+                             <a href="/doc/{{.XINXI_SECOND_RIGHT_UP.Id}}">
                                 <div class="hw1_img_wrap">
                                     <h3>
-                                        医学研究中心
+                                       {{.XINXI_SECOND_RIGHT_UP.Biaoti}}
                                     </h3>
-                                    <p>专注基因动力学领域，拥有全球强大专家阵容，持续推出前沿科技新品，造福人类。
+                                    <p>
+                                       {{.XINXI_SECOND_RIGHT_UP.Zhaiyao}}
                                     </p>
                                 </div>
                             </a>
@@ -95,31 +94,29 @@
                          style="display:block;">
                         <div class="hw1_img"
                              style="display:block;">
-                            <a href="/doc/369">
+                            <a href="/doc/{{.XINXI_SECOND_RIGHT_DOWN.Id}}">
                                 <span class="lazy-loaded over">
                                     <img class="img-responsive lazy"
                                          width="700"
                                          height="242"
-                                         data-original="/static/img/jiankangguanlizhongxin2.jpg?h=342&amp;la=zh&amp;w=700"
+                                         data-original="{{.XINXI_SECOND_RIGHT_DOWN.Tupian}}?h=342&amp;la=zh&amp;w=700"
                                          style="display: block;" />
                                 </span>
                             </a>
                         </div>
                         <div class="hw1_img_subinfo"
                              style="display:block;">
-                            <a href="/doc/369">
+                            <a href="/doc/{{.XINXI_SECOND_RIGHT_DOWN.Id}}">
                                 <div class="hw1_img_wrap">
                                     <h3>
-                                        健康管理中心
+                                       {{.XINXI_SECOND_RIGHT_DOWN.Biaoti}}
                                     </h3>
-                                    <p>为产品使用客户与合作伙伴，提供快捷贴心的咨询、售后以及健康协助等服务。
+                                    <p>
+                                       {{.XINXI_SECOND_RIGHT_DOWN.Zhaiyao}}
                                     </p>
                                 </div>
                             </a>
                         </div>
-                        <section class="">
-                            <div class=""></div>
-                        </section>
                     </div>
                 </div>
             </div>
@@ -131,26 +128,25 @@
                  style="display:block;">
                 <div class="hw1_img"
                      style="display:block;">
-                    <a href="/doc/372">
+                    <a href="/doc/{{.XINXI_THIRD_LEFT.Id}}">
                         <span class="lazy-loaded over">
-                            <img src="/static/img/shumayixue.jpg"
-                                 class="img-responsive lazy"
-                                 alt=""
+                            <img class="img-responsive lazy"
                                  width="700"
                                  height="342"
-                                 data-original="/static/img/shumayixue.jpg?h=342&amp;la=zh&amp;w=700"
+                                 data-original="{{.XINXI_THIRD_LEFT.Tupian}}?h=342&amp;la=zh&amp;w=700"
                                  style="display: block;" />
                         </span>
                     </a>
                 </div>
                 <div class="hw1_img_subinfo"
                      style="display:block;">
-                    <a href="/doc/372">
+                    <a href="/doc/{{.XINXI_THIRD_LEFT.Id}}">
                         <div class="hw1_img_wrap">
                             <h3>
-                                数码医学，开启智慧医疗新篇章
+                              {{.XINXI_THIRD_LEFT.Biaoti}}
                             </h3>
-                            <p>运用数码科技，让传统医学更精准，效率更高，造福更多病患人群。
+                            <p>
+                              {{.XINXI_THIRD_LEFT.Zhaiyao}}
                             </p>
                         </div>
                     </a>
@@ -163,26 +159,26 @@
                  style="display:block;">
                 <div class="hw1_img"
                      style="display:block;">
-                    <a href="/doc/361">
+                    <a href="/doc/{{.XINXI_THIRD_RIGHT.Id}}">
                         <span class="lazy-loaded over">
-                            <img src="/static/img/shujuzhongxin.jpg"
-                                 class="img-responsive lazy"
-                                 alt=""
+                            <img class="img-responsive lazy"
                                  width="700"
                                  height="342"
-                                 data-original="/static/img/shujuzhongxin.jpg?h=342&amp;la=zh&amp;w=700"
+                                 data-original="{{.XINXI_THIRD_RIGHT.Tupian}}?h=342&amp;la=zh&amp;w=700"
                                  style="display: block;" />
                         </span>
                     </a>
                 </div>
                 <div class="hw1_img_subinfo"
                      style="display:block;">
-                    <a href="/doc/361">
+                    <a href="/doc/{{.XINXI_THIRD_RIGHT.Id}}">
                         <div class="hw1_img_wrap">
                             <h3>
-                                数据AI平台
+                                {{.XINXI_THIRD_RIGHT.Biaoti}}
                             </h3>
-                            <p>通过互联网与智能化科技，系统智能管理客户数据与服务流程，使用便捷省心。</p>
+                            <p>
+                              {{.XINXI_THIRD_RIGHT.Zhaiyao}}
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -204,9 +200,6 @@
                 </span>
             <div class="title">
                 <h2>尚德智医，天下无疾</h2>
-                <a href="javascript:void(0)"
-                   class="close">
-                </a>
             </div>
         </div>
     </div>
@@ -217,34 +210,34 @@
         <div class="row">
             <div class="col-sm-4">
                 <h2>
-                    <a href="/doc/374"
+                    <a href="/wenzhanglist"
                        target="_parent">
                         新闻
                     </a>
                 </h2>
                 <ul>
                     <li class="clearfix">
-                        <a href="/doc/362">
-                            美华获得深圳某知名企业天使轮投资数千万
+                      <a href="/doc/{{.XINWEN_WENZI1.Id}}">
+                        {{.XINWEN_WENZI1.Biaoti}}
                         </a>
                         <span class="date">
-                            2017-05-02
+                          {{date .XINWEN_WENZI1.Shijian "Y-m-d"}}
                         </span>
                     </li>
                     <li class="clearfix">
-                        <a href="/doc/363">
-                            美华入住四川天府生命科技园
-                        </a>
-                        <span class="date">
-                            2017-04-27
-                        </span>
+                      <a href="/doc/{{.XINWEN_WENZI2.Id}}">
+                        {{.XINWEN_WENZI2.Biaoti}}
+                      </a>
+                      <span class="date">
+                        {{date .XINWEN_WENZI2.Shijian "Y-m-d"}}
+                      </span>
                     </li>
                     <li class="clearfix">
-                        <a href="/doc/364">
-                            数码医学引领医学新篇章--迪恩摩音2.0
+                        <a href="/doc/{{.XINWEN_WENZI3.Id}}">
+                        {{.XINWEN_WENZI3.Biaoti}}
                         </a>
                         <span class="date">
-                            2017-04-27
+                          {{date .XINWEN_WENZI3.Shijian "Y-m-d"}}
                         </span>
                     </li>
                 </ul>
@@ -253,49 +246,45 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="tit-margin">
-                            <a href="/doc/365">
+                          <a href="/doc/{{.XINWEN_TUPIAN1.Id}}">
                                 <span class="lazy-loaded over">
-                                    <img src="/static/img/air_conew2.jpg"
-                                         class="img-responsive lazy"
-                                         alt=""
+                                    <img class="img-responsive lazy"
                                          width="540"
                                          height="237"
-                                         data-original="/static/img/air_conew2.jpg?h=237&amp;la=zh&amp;w=540"
+                                         data-original="{{.XINWEN_TUPIAN1.Tupian}}?h=237&amp;la=zh&amp;w=540"
                                          style="display: block;" />
                                 </span>
                             </a>
                             <h3>
-                                <a href="/doc/365">
-                                    参加中国创新创业展会
+                              <a href="/doc/{{.XINWEN_TUPIAN1.Id}}">
+                                   {{.XINWEN_TUPIAN1.Biaoti}}
                                 </a>
                             </h3>
-                            <p>新ICT，迈向航空数字化转型之路
+                            <p>{{.XINWEN_TUPIAN1.Zhaiyao}}
                                 <br>
-                                阿联酋，迪拜 5月15日–17日
+                               {{.XINWEN_TUPIAN1.Laiyuan}}
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="tit-margin">
-                            <a href="/doc/367">
+                          <a href="/doc/{{.XINWEN_TUPIAN2.Id}}">
                                 <span class="lazy-loaded over">
-                                    <img src="/static/img/finance_conew.jpg"
-                                         class="img-responsive lazy"
-                                         alt=""
+                                    <img class="img-responsive lazy"
                                          width="539"
                                          height="237"
-                                         data-original="/static/img/finance_conew.jpg?h=237&amp;la=zh&amp;w=539"
+                                         data-original="{{.XINWEN_TUPIAN2.Tupian}}?h=237&amp;la=zh&amp;w=539"
                                          style="display: block;" />
                                 </span>
                             </a>
                             <h3>
-                                <a href="/doc/367">
-                                    2017华为全球金融峰会
+                                <a href="/doc/{{.XINWEN_TUPIAN2.Id}}">
+                                  {{.XINWEN_TUPIAN2.Biaoti}}
                                 </a>
                             </h3>
-                            <p>新ICT，加速数字化银行转型
+                            <p>{{.XINWEN_TUPIAN2.Zhaiyao}}
                                 <br>
-                                中国，北京 5月23日
+                                {{.XINWEN_TUPIAN2.Laiyuan}}
                             </p>
                         </div>
                     </div>

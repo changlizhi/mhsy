@@ -1,45 +1,31 @@
 {{ template "header"}}
-<style type="text/css">LVHA
-a.link:link {
-    color: red;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-a.link:visited {
-    color: blue;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-a.link:active {
-    color: green;
-    text-decoration: none;
-    font-size: 14px;
-}
-</style>
+    <link href="/static/css/templatemo_style.css" rel="stylesheet">	
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
 <div class='container'
-     style='padding-left: 10em;padding-top: 2em;padding-bottom:3em;'>
-    <p>展示所有的文章列表进行点击展现：</p>
-    <p>
-        <a class='link'
-           href='/doc/368'>event1
-        </a>
-    </p>
-    <p>
-        <a class='link'
-           href='/doc/370'>event2
-        </a>
-    </p>
-    <p>
-        <a class='link'
-          href='/doc/371'>event3
-        </a>
-    </p>
-    <p>
-        <a class='link'
-          href='/doc/373'>event4
-        </a>
-    </p>
+  style='padding-left: 10em;padding-top: 2em;padding-bottom:3em;'>
+    <div id="templatemo_upcomming_event" class="container_wapper">
+        <div class="container">
+            <div class="row">
+              {{range .Dnamy}}
+                <div class="col-sm-6 col-md-3">
+                    <div class="event_box event_animate_left">
+                      <a href="/doc/{{.Id}}">
+                        <img src="{{.Tupian}}" alt="{{.Biaoti}}" class="img-responsive" />
+                        </a>
+                        <ul>
+                            <li>
+                              <span class="glyphicon glyphicon-calendar"></span>{{.Biaoti}}<br />
+                            </li>
+                            <li>
+                              <span class="glyphicon glyphicon-map-marker"></span>{{.Guanjianzi}}<br />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              {{end}}
+            </div>
+        </div>
+    </div>
 </div>
 {{ template "footer" .}}
