@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type ='text/javascript' src='/static/js/jquery.js'></script>
+  </head>
+  <body>
+     <form >
+      <input type='file' name='upload' onchange='uploadimg()'/>
+     </form>
+   </body>
+
+   <script type='text/javascript'>
+     
+     function uploadimg(){
+       var fd = new FormData($('form')[0])
+       console.log(fd.get('upload'));
+       $.ajax({
+         url:'/uploadimg',
+         data:fd,
+         type:'POST',
+         cache:false,
+         contentType:false,
+         processData:false,
+         success:function(res){
+          console.log(res);
+         }
+       });
+     }
+   </script>
+</html>

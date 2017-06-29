@@ -19,4 +19,5 @@ func init() {
 	beego.Router("/base", &controllers.Base_controller{})
 	beego.Router("/wenzhanglist", &controllers.Wenzhanglist_controller{})
 	beego.Router("/doc/:id", &controllers.Wenzhang_controller{})
+	beego.Router("/testupload", &controllers.Testupload_controller{})
 }

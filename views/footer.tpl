@@ -159,8 +159,8 @@
                     <div class="QR-code clearfix row mt10 hidden-xs hidden-sm">
                         <div class="col-xs-4">
                             <img alt=""
-                                 width='100px'
-                                 height='100px'
+                                 width='200px'
+                                 height='200px'
                                  src="/static/img/wx.jpg">
                         </div>
                     </div>

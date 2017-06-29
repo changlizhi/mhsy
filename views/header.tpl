@@ -43,7 +43,6 @@
                 src="/static/js/insight.min.js"></script>
 
         <script type="text/javascript"
-
                 charset="utf-8"
                 id="utag_13"
                 src="/static/js/aquant.js"></script>
@@ -63,6 +62,8 @@
                 src="/static/js/modernizr-2.8.3.js"></script>
         <script type="text/javascript"
                 src="/static/js/jquery.lazyload.js"></script>
+        <script type="text/javascript"
+                src="/static/js/jquery.form.js"></script>
         <script type="text/javascript"
                 src="/static/js/jquery.hoverIntent.js"></script>
         <script type="text/javascript"

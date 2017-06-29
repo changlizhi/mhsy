@@ -4,9 +4,11 @@ import (
 	"github.com/astaxie/beego"
 	jwt "github.com/dgrijalva/jwt-go"
 	"log"
+	"mhsy/models"
 	"mhsy/src/inits"
 	"mhsy/src/wenzhangdao"
 	"mhsy/src/wenzhangleixingservice"
+	"mhsy/src/wenzhangservice"
 	"mhsy/src/yonghuservice"
 	"strconv"
 	"strings"
@@ -48,19 +50,28 @@ type Dnamylist_controller struct {
 	beego.Controller
 }
 
+type Testupload_controller struct {
+	beego.Controller
+}
+
 func (c *Error_controller) Error404() {
 	c.TplName = "error.html"
 }
-
+func (c *Testupload_controller) Get() {
+	c.TplName = "testupload.html"
+}
 func (c *Imgupload_controller) Post() {
-	f, h, _ := c.GetFile("upload")
+	f, h, err := c.GetFile("upload")
+	if err != nil {
+		log.Println("upload errror!", err)
+	}
 	path := "static/img/upload/" + h.Filename
-	err := c.SaveToFile("upload", path)
+	err = c.SaveToFile("upload", path)
 	if err != nil {
 		log.Println("ckeditor上传文件错误！")
 	}
 	f.Close()
-	c.Ctx.WriteString("{'url':'" + path + "','state':'SUCCESS'}")
+	c.Ctx.WriteString("{'url':'/" + path + "','state':'SUCCESS'}")
 	return
 }
 
@@ -79,11 +90,10 @@ func (c *Toeditor_controller) Get() {
 		lingpai := splitstr[3]
 		tongguo, claims := Yanzheng_lingpai(lingpai)
 		if !tongguo {
-			log.Println("验证失败了，claims为null")
+			log.Println("验证失败了，claims为------", claims)
 			c.TplName = "autherror.html"
 			return
 		}
-		log.Println("自定义参数----------", claims.User)
 		suoyou_fenlei := wenzhangleixingservice.Huoqu_suoyou_leixing()
 		for i := 0; i < len(suoyou_fenlei); i++ {
 			if suoyou_fenlei[i].Fenlei == splitstr[1] {
@@ -108,14 +118,13 @@ func (c *Toeditor_controller) Get() {
 		lingpai := splitstr[2]
 		tongguo, claims := Yanzheng_lingpai(lingpai)
 		if !tongguo {
-			log.Println("验证失败了，claims为null")
+			log.Println("验证失败了，claims为------", claims)
 			c.TplName = "autherror.html"
 			return
 		}
-		log.Println("自定义参数----------", claims.User)
 		c.Data["requrl"] = "wenzhanglist"
 		c.Data["editorflag"] = "add"
-		c.TplName="toeditor_new.html"
+		c.TplName = "toeditor_new.html"
 		return
 	}
 	log.Println("需要修改的模块在数据库没有提供支持")
@@ -191,11 +200,10 @@ func (sy *Richeditor_controller) Post() {
 	lingpai := strings.Split(sy.Ctx.Input.Header("Authorization"), " ")[1]
 	tongguo, claims := Yanzheng_lingpai(lingpai)
 	if !tongguo {
-		log.Println("验证失败了，claims为null")
+		log.Println("验证失败了，claims为---------", claims)
 		sy.TplName = "autherror.html"
 		return
 	}
-	log.Println("自定义参数----------", claims.User)
 	requrl := sy.GetString("requrl")
 	contentpre := sy.GetString("content")
 	content := strings.Replace(contentpre, "&nbsp;", " ", -1)
@@ -204,6 +212,7 @@ func (sy *Richeditor_controller) Post() {
 	zhaiyao := sy.GetString("Zhaiyao")
 	guanjianzi := sy.GetString("Guanjianzi")
 	faburen := sy.GetString("Faburen")
+	tupian := sy.GetString("Tupian")
 	if editorflag == "update" {
 		idstr := sy.GetString("Id")
 		id, _ := strconv.ParseInt(idstr, 10, 10)
@@ -213,7 +222,25 @@ func (sy *Richeditor_controller) Post() {
 		wenzhang_db.Zhaiyao = zhaiyao
 		wenzhang_db.Guanjianzi = guanjianzi
 		wenzhang_db.Faburen = faburen
+		wenzhang_db.Tupian = tupian
 		wenzhangdao.Update_wenzhang(wenzhang_db)
+	}
+	if editorflag == "add" {
+		wenzhang_db := models.Wenzhang{}
+		wenzhang_db.Wenben = content
+		wenzhang_db.Biaoti = biaoti
+		wenzhang_db.Zhaiyao = zhaiyao
+		wenzhang_db.Guanjianzi = guanjianzi
+		wenzhang_db.Faburen = faburen
+		wenzhang_db.Tupian = tupian
+
+		wenzhang_db.Laiyuan = "美华基因"
+		wenzhang_db.Zhiding = "1"
+		wenzhang_db.Shanchu = "0"
+		wenzhang_db.Shijian = time.Now()
+		wenzhang_db.Quanxian = "ROLE_USER"
+		wenzhang_db.Yuyan = inits.Bgo_json.Zhong_wen
+		wenzhangservice.Tianjia_wenzhang(&wenzhang_db)
 	}
 
 	sy.Data["json"] = map[string]interface{}{"state": 0, "content": requrl}
@@ -238,7 +265,7 @@ func (sy *Shou_ye_controller) Get() {
 }
 
 func (sy *Wenzhanglist_controller) Get() {
-	dnamys:= wenzhangdao.Select_dnamy(int64(120))
+	dnamys := wenzhangdao.Select_dnamy(int64(120))
 	sy.Data["Dnamy"] = dnamys
 	sy.TplName = "wenzhanglist.html"
 	return
