@@ -15,9 +15,11 @@ func Tianjia_wenzhang(wz *models.Wenzhang) {
 				dbxinwen.Biaoji = ""
 				dbxinwen.Fenlei = "DNAMY"
 				dbxinwen.Moban = ""
+				dbxinwen.Shijian= time.Now()
 			}
 			if dbxinwen.Biaoji == inits.Bgo_json.Xinwen_tupian1 {
 				dbxinwen.Biaoji = inits.Bgo_json.Xinwen_tupian2
+				dbxinwen.Shijian= time.Now()
 			}
 			wenzhangdao.Update_wenzhang(&dbxinwen)
 		}
@@ -32,12 +34,15 @@ func Tianjia_wenzhang(wz *models.Wenzhang) {
 				dbxinwen.Biaoji = ""
 				dbxinwen.Fenlei = "DNAMY"
 				dbxinwen.Moban = ""
+				dbxinwen.Shijian= time.Now()
 			}
 			if dbxinwen.Biaoji == inits.Bgo_json.Xinwen_wenzi2 {
 				dbxinwen.Biaoji = inits.Bgo_json.Xinwen_wenzi3
+				dbxinwen.Shijian= time.Now()
 			}
 			if dbxinwen.Biaoji == inits.Bgo_json.Xinwen_wenzi1 {
 				dbxinwen.Biaoji = inits.Bgo_json.Xinwen_wenzi2
+				dbxinwen.Shijian= time.Now()
 			}
 			wenzhangdao.Update_wenzhang(&dbxinwen)
 		}
