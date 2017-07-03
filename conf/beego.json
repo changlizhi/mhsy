@@ -10,7 +10,7 @@
   "Db_protocol": "tcp",
   "Db_ip": "127.0.0.1",
   "Db_port": "3306",
-	"Chanpin_first":"CHANPIN_FIRST",
+  "Chanpin_first":"CHANPIN_FIRST",
   "Chanpin_second":"CHANPIN_SECOND",
   "Chanpin_third":"CHANPIN_THIRD",
   "Xinwen_tupian1":"XINWEN_TUPIAN1",
