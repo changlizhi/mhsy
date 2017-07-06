@@ -150,16 +150,10 @@
 
 
                 <div class="col-md-4 col-sm-12 col-xs-12 win-foot-border-top">
-                    <div class="footer-icon-top">
-                        <label>
-                            关注我们
-                        </label>
-                    </div>
 
                     <div class="QR-code clearfix row mt10 hidden-xs hidden-sm">
                         <div class="col-xs-4">
-                            <img alt=""
-                                 width='200px'
+                            <img width='200px'
                                  height='200px'
                                  src="/static/img/wx.jpg">
                         </div>
